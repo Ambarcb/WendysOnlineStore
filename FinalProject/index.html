@@ -25,15 +25,15 @@
     <header id="header">
         <nav>
             <ul>
-                <li><a href="#" onclick="home_page()" class="active text-white">|Inicio|</a></li>
+                <li><a href="#" onclick="HomePage()" class="active text-white">|Inicio|</a></li>
                 <li><a href="#menu">|Menú|</a></li>
                 <li><a href="#" data-toggle="modal" data-target=".orderCart">|Carrito|
                             <div style="width: 20px;height: 20px;background: #fff;position: absolute;top: 15px;margin-left: 90px;border-radius: 50%">
-                                <p id="order_number" style="position: absolute;margin-top: -30px;margin-left: 6px;color: #0082e6;font-size: 80%">0</p>
+                                <p id="orderNumber" style="position: absolute;margin-top: -30px;margin-left: 6px;color: #0082e6;font-size: 80%">0</p>
                             </div> </a></li>
-                <li><a href="#" id="menu_login_button" data-toggle="modal" data-target=".login">|Login|</a></li>
+                <li><a href="#" id="loginMenuButton" data-toggle="modal" data-target=".login">|Login|</a></li>
                 <li>
-                    <a id="menu_account_login" class="menu_account_hide" style="display: none;"></a>
+                    <a id="accountMenuLogin" class="menu_account_hide" style="display: none;"></a>
                 </li>
             </ul>
         </nav>
@@ -52,7 +52,7 @@
                 <h1>Wendy's</h1>
                 <h2>La calidad es nuestra receta</h2>
                 <p>Obtén lo mejor de Wendy's desde cualquier parte y disfruta de nuestro sabor.</p>
-                <a href="#"><button>Empezar</button></a>
+                <a href="#menu"><button>Empezar</button></a>
             </div>
 
             <div class="video-container">
@@ -71,7 +71,7 @@
         </div>
         </div>
 
-        <div id="menu_logout">
+        <div id="logOutMenu">
             <div id="menu_header22" class="khung p-3" style="margin: 0 auto;width: 200px; background: #0082e6; border-radius: 8px; font-family: Helvetica, Arial, sans-serif;padding: 0.5rem;position: absolute;z-index: 999;margin-left: calc(100vw - 335px);margin-top: -690px;display: none;">
                 <p id="greetUser" class="text-white" style="opacity: 0.9"></p>
 
@@ -113,7 +113,7 @@
         </div>
 
         <div id="list_food_home" class="container">
-            <div class="row" id="prinf_food">
+            <div class="row" id="printFood">
             </div>
         </div>
 
@@ -174,7 +174,7 @@
                         <thead>
                             <tr>
                                 <th scope="col" style="width: 20%;font-size: 115%;">Nombre del cliente</th>
-                                <th scope="col" style="width: 44%;font-size: 115%;" class="text-center">Artículos</th>
+                                <th scope="col" style="width: 47%;font-size: 115%;" class="text-center">Artículos</th>
                                 <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Monto total</th>
                                 <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Estado del pedido</th>
                             </tr>
@@ -202,12 +202,12 @@
                 <div id="changepass" class=" iconpopup mt-4" style="margin: 0 auto; width: 80%;margin-bottom: 10%;">
                     <p class="text-center mb-3" style="font-weight: bold;margin-bottom: 2%;font-size: 120%">Cambiar contraseña</p>
                     <p class="mt-3" style="margin-bottom: 2%;">Ingrese su contraseña actual</p>
-                    <input type="password" name="pass" id="passcurrent" class="form-control">
+                    <input type="password" name="pass" id="currentPassword" class="form-control">
                     <p class="mt-1" style="margin-bottom: 2%;">Ingrese su nueva contraseña</p>
-                    <input type="password" name="pass" id="passnew" class="form-control">
+                    <input type="password" name="pass" id="newPassword" class="form-control">
                     <p class="mt-1" style="margin-bottom: 2%;">Repita su nueva contraseña</p>
                     <input type="password" name="pass" id="passnewrepeat" class="form-control">
-                    <p id="notification_change_pass" class="mt-4 text-center mb-0" style="font-size: 90%;color: red;"></p>
+                    <p id="passwordChangeNotification" class="mt-4 text-center mb-0" style="font-size: 90%;color: red;"></p>
                     <button class="btn btn-warning float-right mt-3" onclick="ChangePassword()">Cambiar</button>
                 </div>
             </div>
@@ -281,7 +281,7 @@
                         <p class="font-weight-bold mt-2" style="font-size: 115%">Monto total</p>
                     </div>
                     <div class="float-right pr-5" style="width: 30%;">
-                        <p id="total_money" class="font-weight-bold float-right mt-2" style="font-size: 115%"> </p>
+                        <p id="totalAmount" class="font-weight-bold float-right mt-2" style="font-size: 115%"> </p>
                     </div>
                     <div style="clear: both;"></div>
                     <div onclick="CheckOut()" class="btn mr-5 text-white float-right" style="background: #32CD32;">Realizar pago</div>
@@ -326,20 +326,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        var scrollToMenuBtn = document.getElementById("scrollToMenuBtn");
-        var rootElement = document.documentElement;
-
-        function scrollToMenu() {
-            rootElement.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            })
-        }
-
-        scrollToMenuBtn.addEventListener("click", scrollToMenu);
-    </script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -441,7 +427,7 @@
 
         $(document).ready(function() {
 
-            $('#menu_account_login').on('click', function() {
+            $('#accountMenuLogin').on('click', function() {
                 $('.khung').toggleClass('menu_account_show');
             });
 
@@ -471,25 +457,25 @@
         }
 
 
-        function management_web() {
+        function WebManagement() {
             document.getElementById("list_food_home").style.display = 'none';
             document.getElementById("management_food").style.display = 'block';
 
         }
 
-        function home_page() {
+        function HomePage() {
             document.getElementById("list_food_home").style.display = 'block';
             document.getElementById("management_food").style.display = 'none';
-            listFood();
+            ListFood();
         }
     </script>
 
     <script type="text/javascript">
-        var id_order_food = JSON.parse(localStorage.getItem('id_order_food'));
-        if (id_order_food === null) {
-            id_order_food = [];
-            var id_order_food = 0;
-            localStorage.setItem("id_order_food", JSON.stringify(id_order_food));
+        var orderFoodId = JSON.parse(localStorage.getItem('orderFoodId'));
+        if (orderFoodId === null) {
+            orderFoodId = [];
+            var orderFoodId = 0;
+            localStorage.setItem("orderFoodId", JSON.stringify(orderFoodId));
         }
 
 
@@ -523,9 +509,9 @@
             localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
         }
 
-        var food = JSON.parse(localStorage.getItem('food'));
-        if (food === null) {
-            food = [];
+        var product = JSON.parse(localStorage.getItem('product'));
+        if (product === null) {
+            product = [];
         }
 
         var account = JSON.parse(localStorage.getItem('account'));
@@ -546,13 +532,13 @@
                 username: "a",
                 password: "a",
                 level: 0
-            }];
+            }, ];
             localStorage.setItem("account", JSON.stringify(account));
         }
-        var food = JSON.parse(localStorage.getItem('food'));
-        if (food === null) {
-            food = [];
-            food = [{
+        var product = JSON.parse(localStorage.getItem('product'));
+        if (product === null) {
+            product = [];
+            product = [{
                 id: 0,
                 name: "1/4 de libra",
                 price: "330",
@@ -698,14 +684,14 @@
                 note: "12 oz de Frosty mezclado con Oreo.",
                 image: new URL("https://static.wixstatic.com/media/48db21_90043a20b1fb4ed2ab9b79c7c27a2a01~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
             }];
-            localStorage.setItem("food", JSON.stringify(food));
+            localStorage.setItem("product", JSON.stringify(product));
         }
 
-        var orderFood = JSON.parse(localStorage.getItem('orderFood'));
+        var foodOrder = JSON.parse(localStorage.getItem('foodOrder'));
 
-        if (orderFood === null) {
-            orderFood = [{}];
-            localStorage.setItem("orderFood", JSON.stringify(orderFood));
+        if (foodOrder === null) {
+            foodOrder = [{}];
+            localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
         }
 
         var accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
@@ -726,32 +712,32 @@
         } else if (account[checkLogin].level == 0) {
 
             document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
-            document.getElementById("menu_account_login").innerHTML = account[checkLogin].username;
-            document.getElementById("menu_account_login").style.display = 'block';
-            document.getElementById("menu_login_button").style.display = 'none';
+            document.getElementById("accountMenuLogin").innerHTML = account[checkLogin].username;
+            document.getElementById("accountMenuLogin").style.display = 'block';
+            document.getElementById("loginMenuButton").style.display = 'none';
             document.getElementById("greetUser").innerHTML = "Bienvenido " + account[checkLogin].username + " !";
-            document.getElementById("menu_logout").style.display = 'block';
+            document.getElementById("logOutMenu").style.display = 'block';
             document.getElementById("modalMenu").style.display = 'none';
             PrintOrder();
             demOrder();
         } else if (account[checkLogin].level == 1) {
             document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
-            document.getElementById("menu_account_login").innerHTML = account[checkLogin].username;
-            document.getElementById("menu_account_login").style.display = 'block';
-            document.getElementById("menu_login_button").style.display = 'none';
+            document.getElementById("accountMenuLogin").innerHTML = account[checkLogin].username;
+            document.getElementById("accountMenuLogin").style.display = 'block';
+            document.getElementById("loginMenuButton").style.display = 'none';
             document.getElementById("greetUser").innerHTML = "Bienvenido " + account[checkLogin].username + " !";
-            document.getElementById("menu_logout").style.display = 'block';
+            document.getElementById("logOutMenu").style.display = 'block';
             document.getElementById("modalMenu").style.display = 'block';
             PrintOrder();
             demOrder();
 
         }
 
-        var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
-        if (paymentFood === null) {
-            paymentFood = [];
-            var paymentFood = [{}];
-            localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+        var foodPayment = JSON.parse(localStorage.getItem('foodPayment'));
+        if (foodPayment === null) {
+            foodPayment = [];
+            var foodPayment = [{}];
+            localStorage.setItem("foodPayment", JSON.stringify(foodPayment));
         }
         console.log(account);
 
@@ -789,11 +775,11 @@
                     localStorage.setItem("idIncrement", JSON.stringify(idIncrement));
                     console.log(account);
                     document.getElementById("signUpStatus").innerHTML = "Registro completado exitosamente";
-                    document.getElementById("menu_account_login").innerHTML = username;
-                    document.getElementById("menu_account_login").style.display = 'block';
-                    document.getElementById("menu_login_button").style.display = 'none';
+                    document.getElementById("accountMenuLogin").innerHTML = username;
+                    document.getElementById("accountMenuLogin").style.display = 'block';
+                    document.getElementById("loginMenuButton").style.display = 'none';
                     document.getElementById("greetUser").innerHTML = "Bienvenido " + username + " !";
-                    document.getElementById("menu_logout").style.display = 'block';
+                    document.getElementById("logOutMenu").style.display = 'block';
                     location.reload();
                 } else {
                     document.getElementById("signUpStatus").innerHTML = "Error. Esta cuenta ya existe. Intente de nuevo.";
@@ -811,11 +797,11 @@
 
                     if (account[i].level == 0) {
                         document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
-                        document.getElementById("menu_account_login").innerHTML = account[i].username;
-                        document.getElementById("menu_account_login").style.display = 'block';
-                        document.getElementById("menu_login_button").style.display = 'none';
+                        document.getElementById("accountMenuLogin").innerHTML = account[i].username;
+                        document.getElementById("accountMenuLogin").style.display = 'block';
+                        document.getElementById("loginMenuButton").style.display = 'none';
                         document.getElementById("greetUser").innerHTML = "Bienvenido " + account[i].username + " !";
-                        document.getElementById("menu_logout").style.display = 'block';
+                        document.getElementById("logOutMenu").style.display = 'block';
                         document.getElementById("modalMenu").style.display = 'none';
                         PrintOrder();
                         demOrder();
@@ -824,11 +810,11 @@
 
                     } else if (account[i].level == 1) {
                         document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
-                        document.getElementById("menu_account_login").innerHTML = account[i].username;
-                        document.getElementById("menu_account_login").style.display = 'block';
-                        document.getElementById("menu_login_button").style.display = 'none';
+                        document.getElementById("accountMenuLogin").innerHTML = account[i].username;
+                        document.getElementById("accountMenuLogin").style.display = 'block';
+                        document.getElementById("loginMenuButton").style.display = 'none';
                         document.getElementById("greetUser").innerHTML = "Bienvenido " + account[i].username + " !";
-                        document.getElementById("menu_logout").style.display = 'block';
+                        document.getElementById("logOutMenu").style.display = 'block';
                         document.getElementById("modalMenu").style.display = 'block';
                         PrintOrder();
                         demOrder();
@@ -842,11 +828,11 @@
             }
         }
 
-        function DeleteOrder(id_order) {
-            for (var i = 0; i < orderFood.length; i++) {
-                if (id_order == orderFood[i].id_order && checkLogin == orderFood[i].user_id_order) {
-                    orderFood.splice(i, 1);
-                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+        function DeleteOrder(orderId) {
+            for (var i = 0; i < foodOrder.length; i++) {
+                if (orderId == foodOrder[i].orderId && checkLogin == foodOrder[i].orderUserId) {
+                    foodOrder.splice(i, 1);
+                    localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
                     PrintOrder();
                     demOrder();
                     break;
@@ -854,27 +840,27 @@
             }
         }
 
-        function totalMoney(checkLogin) {
-            var total_order = 0;
-            for (let i = 0; i < orderFood.length; i++) {
-                if (checkLogin == orderFood[i].user_id_order) {
-                    total_order += orderFood[i].price_order * orderFood[i].quanlity_order;
+        function GetTotalAmount(checkLogin) {
+            var orderTotal = 0;
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (checkLogin == foodOrder[i].orderUserId) {
+                    orderTotal += foodOrder[i].orderPrice * foodOrder[i].orderQuantity;
 
                 }
 
             }
-            document.getElementById("total_money").innerHTML = "DOP" + total_order;
+            document.getElementById("totalAmount").innerHTML = "DOP" + orderTotal;
 
         }
 
-        function upQuality(id_order) {
+        function upQuality(orderId) {
             var ok = 0;
-            for (let i = 0; i < orderFood.length; i++) {
-                if (id_order == orderFood[i].id_order && checkLogin == orderFood[i].user_id_order) {
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (orderId == foodOrder[i].orderId && checkLogin == foodOrder[i].orderUserId) {
                     var quality_input_change = document.getElementById('quality_input_change' + i).value;
-                    orderFood[i].quanlity_order = quality_input_change;
-                    ok += orderFood[i].price_order * orderFood[i].quanlity_order;
-                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                    foodOrder[i].orderQuantity = quality_input_change;
+                    ok += foodOrder[i].orderPrice * foodOrder[i].orderQuantity;
+                    localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
                     PrintOrder();
                 }
             }
@@ -882,7 +868,7 @@
         document.getElementById("customerName").value = account[checkLogin].username;
         document.getElementById("customerPhoneNumber").value = accountInfo[checkLogin].customerPhoneNumber;
         document.getElementById("customerAddress").value = accountInfo[checkLogin].customerAddress;
-        for (let i = 0; i < orderFood.length; i++) {
+        for (let i = 0; i < foodOrder.length; i++) {
             if (accountInfo[i].accountPayment == account[checkLogin].id) {
                 checkInfo = 1;
                 localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
@@ -901,10 +887,10 @@
             var status = "Esperando confirmación";
             var priceTotal = 0;
             PushPaymentArray();
-            for (let i = 0; i < orderFood.length; i++) {
-                if (orderFood[i].user_id_order == checkLogin) {
-                    priceTotal += orderFood[i].price_order * orderFood[i].quanlity_order;
-                    quanlityPayment = orderFood[i].quanlity_order;
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (foodOrder[i].orderUserId == checkLogin) {
+                    priceTotal += foodOrder[i].orderPrice * foodOrder[i].orderQuantity;
+                    paymentQuantity = foodOrder[i].orderQuantity;
 
                 }
             }
@@ -913,7 +899,7 @@
                 paymentId,
                 accountPayment,
                 showOrderDetail,
-                quanlityPayment,
+                paymentQuantity,
                 priceTotal,
                 customerName,
                 customerPhoneNumber,
@@ -921,8 +907,8 @@
                 paymentMethod,
                 status
             };
-            paymentFood.push(paymentArray);
-            localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+            foodPayment.push(paymentArray);
+            localStorage.setItem("foodPayment", JSON.stringify(foodPayment));
             paymentId++;
             localStorage.setItem("paymentId", JSON.stringify(paymentId));
             var checkInfo = JSON.parse(localStorage.getItem('checkInfo'));
@@ -938,13 +924,13 @@
                 localStorage.setItem("accountInfo", JSON.stringify(accountInfo));
                 checkInfo = 1;
                 localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
-                console.log(paymentFood);
+                console.log(foodPayment);
 
             }
-            for (let i = 0; i < orderFood.length; i++) {
-                if (checkLogin == orderFood[i].user_id_order) {
-                    orderFood.splice(i, 5);
-                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (checkLogin == foodOrder[i].orderUserId) {
+                    foodOrder.splice(i, 5);
+                    localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
                     location.reload();
                 }
             }
@@ -953,9 +939,9 @@
 
         function PrintOrder() {
             document.getElementById("prinf_order").innerHTML = '';
-            for (let i = 0; i < paymentFood.length; i++) {
-                if (paymentFood[i].accountPayment == checkLogin) {
-                    document.getElementById("prinf_order").innerHTML += paymentFood[i].showOrderDetail;
+            for (let i = 0; i < foodPayment.length; i++) {
+                if (foodPayment[i].accountPayment == checkLogin) {
+                    document.getElementById("prinf_order").innerHTML += foodPayment[i].showOrderDetail;
 
 
                 }
@@ -968,23 +954,23 @@
             } else {
 
 
-                for (let i = 0; i < orderFood.length; i++) {
+                for (let i = 0; i < foodOrder.length; i++) {
                     var checkordervalue = 0;
 
-                    if (id == orderFood[i].id_food && checkLogin == orderFood[i].user_id_order) {
+                    if (id == foodOrder[i].productId && checkLogin == foodOrder[i].orderUserId) {
 
                         checkordervalue = 1;
-                        orderFood[i].quanlity_order++;
+                        foodOrder[i].orderQuantity++;
 
-                        orderFood[i].quanlity_order;
-                        localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                        foodOrder[i].orderQuantity;
+                        localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
                         PrintOrder();
 
                     }
 
                 }
                 if (checkordervalue == 0) {
-                    orderpush(id);
+                    PushOrder(id);
                     PrintOrder();
 
                 }
@@ -993,72 +979,72 @@
 
 
 
-        function orderpush(id) {
-            var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
-            id_order = id_order_food;
-            var name_order = food[id].name;
-            var price_order = food[id].price;
-            var image_order = food[id].image;
-            var note_order = food[id].note;
-            var quanlity_order = 1;
-            var user_id_order = checkLogin;
-            var id_food = id;
+        function PushOrder(id) {
+            var foodPayment = JSON.parse(localStorage.getItem('foodPayment'));
+            orderId = orderFoodId;
+            var orderName = product[id].name;
+            var orderPrice = product[id].price;
+            var orderImage = product[id].image;
+            var orderNote = product[id].note;
+            var orderQuantity = 1;
+            var orderUserId = checkLogin;
+            var productId = id;
             food_order = {
-                id_order,
-                name_order,
-                price_order,
-                image_order,
-                note_order,
-                quanlity_order,
-                user_id_order,
-                id_food
+                orderId,
+                orderName,
+                orderPrice,
+                orderImage,
+                orderNote,
+                orderQuantity,
+                orderUserId,
+                productId
             };
-            orderFood.push(food_order);
+            foodOrder.push(food_order);
 
-            localStorage.setItem("orderFood", JSON.stringify(orderFood));
+            localStorage.setItem("foodOrder", JSON.stringify(foodOrder));
 
             console.log(food_order);
-            id_order_food++;
-            localStorage.setItem("id_order_food", JSON.stringify(id_order_food));
+            orderFoodId++;
+            localStorage.setItem("orderFoodId", JSON.stringify(orderFoodId));
             demOrder();
 
 
             PrintOrder();
 
-            console.log(orderFood);
+            console.log(foodOrder);
 
         }
 
         function demOrder() {
             var demOrder = 0;
-            for (let i = 0; i < orderFood.length; i++) {
-                if (checkLogin == orderFood[i].user_id_order)
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (checkLogin == foodOrder[i].orderUserId)
                     demOrder++;
-                document.getElementById("order_number").innerHTML = demOrder;
+                document.getElementById("orderNumber").innerHTML = demOrder;
 
             }
         }
 
         function PrintOrder() {
             document.getElementById("printOrderCart").innerHTML = '';
-            var orderFood = JSON.parse(localStorage.getItem('orderFood'));
-            totalMoney(checkLogin);
-            for (let i = 0; i < orderFood.length; i++) {
-                if (checkLogin == orderFood[i].user_id_order) {
+            var foodOrder = JSON.parse(localStorage.getItem('foodOrder'));
+            GetTotalAmount(checkLogin);
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (checkLogin == foodOrder[i].orderUserId) {
                     var printOrderCart = `<tr>  
                     <td><div>
                         <div class="cart_img_box float-left">
-                            <img src="` + orderFood[i].image_order + `" width="100%" height="100%">
+                            <img src="` + foodOrder[i].orderImage + `" width="100%" height="100%">
                         </div>
                         <div class="cart_info_box float-left pl-3">
-                            <p class="mb-1 font-weight-bold" style="font-size: 110%;">` + orderFood[i].name_order + `</p>
-                            <p style="font-size: 70%">` + orderFood[i].note_order + `</p>
+                            <p class="mb-1 font-weight-bold" style="font-size: 110%;">` + foodOrder[i].orderName + `</p>
+                            <p style="font-size: 70%">` + foodOrder[i].orderNote + `</p>
                         </div>
                     </div> </td>
-                    <td class="text-center"><input id="quality_input_change` + i + `" onchange ="upQuality(` + orderFood[i].id_order + `)" class="cart_input_quanlity mt-2" type="number" value="` + orderFood[i].quanlity_order + `" name="" min="1" max="20
+                    <td class="text-center"><input id="quality_input_change` + i + `" onchange ="upQuality(` + foodOrder[i].orderId + `)" class="cart_input_quantity mt-2" type="number" value="` + foodOrder[i].orderQuantity + `" name="" min="1" max="20
                                 " style=""> </td>
-                    <td class="text-center"><p class="mt-2" style="padding:5px;">DOP` + orderFood[i].price_order * orderFood[i].quanlity_order + `</p></td>
-                    <td class="text-center"><div onclick="DeleteOrder(` + orderFood[i].id_order + `)" class="cart_button_delete"><i class="fa fa-trash" aria-hidden="true" style="color: #000000;font-size: 180%"></i></div> </td>
+                    <td class="text-center"><p class="mt-2" style="padding:5px;">DOP` + foodOrder[i].orderPrice * foodOrder[i].orderQuantity + `</p></td>
+                    <td class="text-center"><div onclick="DeleteOrder(` + foodOrder[i].orderId + `)" class="cart_button_delete"><i class="fa fa-trash" aria-hidden="true" style="color: #000000;font-size: 180%"></i></div> </td>
                     </tr>`
                     document.getElementById("printOrderCart").innerHTML += printOrderCart;
 
@@ -1078,20 +1064,20 @@
         function PushPaymentArray() {
 
             showOrderDetail = '';
-            totalMoney(checkLogin);
+            GetTotalAmount(checkLogin);
 
-            for (let i = 0; i < orderFood.length; i++) {
-                if (checkLogin == orderFood[i].user_id_order) {
+            for (let i = 0; i < foodOrder.length; i++) {
+                if (checkLogin == foodOrder[i].orderUserId) {
 
                     var pushCart = `<div class="cart_img_box float-left mb-2" style="width: 80px;">
-                    <img src="` + orderFood[i].image_order + `" width="100%" height="100%">
+                    <img src="` + foodOrder[i].orderImage + `" width="100%" height="100%">
                     </div>
                     <div class="cart_info_box float-left pl-3">
-                        <p class="mb-1 font-weight-bold" style="font-size: 115%;">` + orderFood[i].name_order + `</p>
-                        <p style="font-size: 85%">` + orderFood[i].note_order + `</p>
+                        <p class="mb-1 font-weight-bold" style="font-size: 115%;">` + foodOrder[i].orderName + `</p>
+                        <p style="font-size: 85%">` + foodOrder[i].orderNote + `</p>
                     </div>
-                    <div class="quanlity" style="float: right;width: 30px;height: 30px;">
-                    <p>` + orderFood[i].quanlity_order + `</p>
+                    <div class="quantity" style="float: right;width: 30px;height: 30px;">
+                    <p>` + foodOrder[i].orderQuantity + `</p>
                     </div><div style="clear:both;"></div>`
                     showOrderDetail += pushCart;
 
@@ -1104,38 +1090,38 @@
 
         function PrintUserPayment() {
             document.getElementById("printUserPayment").innerHTML = '';
-            var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
-            for (let i = 0; i < paymentFood.length; i++) {
-                if (checkLogin == paymentFood[i].accountPayment) {
-                    var prinf_payment_cart_user = `<tr style="border-bottom:1px solid #ccc;">
+            var foodPayment = JSON.parse(localStorage.getItem('foodPayment'));
+            for (let i = 0; i < foodPayment.length; i++) {
+                if (checkLogin == foodPayment[i].accountPayment) {
+                    var printUserCartPayment = `<tr style="border-bottom:1px solid #ccc;">
       <td>
-      <p>Nombre del destinatario: ` + paymentFood[i].customerName + `</p>
-      <p>Dirección: ` + paymentFood[i].customerAddress + `</p>
-      <p>Número telefónico: ` + paymentFood[i].customerPhoneNumber + `</p>
-       <p>Método de pago: ` + paymentFood[i].paymentMethod + `</p>
+      <p>Nombre del destinatario: ` + foodPayment[i].customerName + `</p>
+      <p>Dirección: ` + foodPayment[i].customerAddress + `</p>
+      <p>Número telefónico: ` + foodPayment[i].customerPhoneNumber + `</p>
+       <p>Método de pago: ` + foodPayment[i].paymentMethod + `</p>
        
       </td>
       
-      <td>` + paymentFood[i].showOrderDetail + `<div id="comment_box` + i + `"></div></td>
-      <td class="text-center">` + paymentFood[i].priceTotal + `</td>
-      <td class="text-center"><button id="printStatus` + paymentFood[i].paymentId + `" onclick="suscess_payment(` + paymentFood[i].paymentId + `)" class="btn btn-warning text-white">` + paymentFood[i].status + `</button></td>
+      <td>` + foodPayment[i].showOrderDetail + `<div id="comment_box` + i + `"></div></td>
+      <td class="text-center">` + foodPayment[i].priceTotal + `</td>
+      <td class="text-center"><button id="printStatus` + foodPayment[i].paymentId + `" onclick="PaymentSuccess(` + foodPayment[i].paymentId + `)" class="btn btn-warning text-white">` + foodPayment[i].status + `</button></td>
           </tr>
     <tr style="width:100%"></tr>
     `
 
-                    document.getElementById("printUserPayment").innerHTML += prinf_payment_cart_user;
+                    document.getElementById("printUserPayment").innerHTML += printUserCartPayment;
                 }
             }
 
         }
 
 
-        function suscess_payment(id) {
-            for (let i = 0; i < paymentFood.length; i++) {
-                if (id == paymentFood[i].paymentId) {
-                    paymentFood[i].status = "Recibido";
-                    localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
-                    document.getElementById("printStatus" + id).innerHTML = paymentFood[i].status;
+        function PaymentSuccess(id) {
+            for (let i = 0; i < foodPayment.length; i++) {
+                if (id == foodPayment[i].paymentId) {
+                    foodPayment[i].status = "Recibido";
+                    localStorage.setItem("foodPayment", JSON.stringify(foodPayment));
+                    document.getElementById("printStatus" + id).innerHTML = foodPayment[i].status;
 
                     var comment_box = `<div class="p-3 pb-0" style="width: 100%;background: #ff6f47;">
                     <div style="float: left;width: 50%">
@@ -1143,7 +1129,7 @@
                     <input id="comment_text` + id + `" type="passwork" class="form-control text-white" id="rePasswordAddInput"  style="width: 100%;background: #ff8f70;border: 0;outline: none;">
                     </div>
                     <div class="pt-3" style="float: right;width: 50%">
-                    <button onclick="sendToAdmin(` + id + `)" class="btn btn-warning float-right text-white" >Enviar</button>
+                    <button onclick="SendToAdmin(` + id + `)" class="btn btn-warning float-right text-white" >Enviar</button>
                     <p id="support_send" class="float-right mb-0 mt-3 text-white"></p>
                         </div>
                     
@@ -1158,7 +1144,7 @@
             }
         }
 
-        function sendToAdmin(id) {
+        function SendToAdmin(id) {
             var checkLogin = JSON.parse(localStorage.getItem('checkLogin'));
             var content_comment = document.getElementById("comment_text" + id).value;
             idPayment = id;
@@ -1173,28 +1159,25 @@
             document.getElementById("support_send").innerHTML = "Comentario enviado exitosamente";
         }
 
-
-
-
-        function listFood() {
-            document.getElementById("prinf_food").innerHTML = '';
-            var food = JSON.parse(localStorage.getItem('food'));
-            for (let i = 0; i < food.length; i++) {
-                var prinf = `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">
+        function ListFood() {
+            document.getElementById("printFood").innerHTML = '';
+            var product = JSON.parse(localStorage.getItem('product'));
+            for (let i = 0; i < product.length; i++) {
+                var print = `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">
 			<div class="produre_box bg-white shadow-sm">
 				<div class="image_box">
-					<img src="` + food[i].image + `" width="100%" height="115%" style="">
+					<img src="` + product[i].image + `" width="100%" height="115%" style="">
 				</div>
 				<div class="info_box p-3 bg-white">
-					<p class="float-left font-weight-bold mb-0" style="font-size: 115%">` + food[i].name + `</p><p class="float-right font-weight-bold mb-2" style="font-size: 115%">DOP` + food[i].price + `</p>
+					<p class="float-left font-weight-bold mb-0" style="font-size: 115%">` + product[i].name + `</p><p class="float-right font-weight-bold mb-2" style="font-size: 115%">DOP` + product[i].price + `</p>
 					<div style="clear: both;"></div>
 					
-					<p align="center" style="font-size: 73%;height:65px;">` + food[i].note + `</p>
+					<p align="center" style="font-size: 73%;height:65px;">` + product[i].note + `</p>
 					<div class="star_box float-left pt-2">
 						<img src="images/icon_star.svg" width="80%">
 					</div>
 					<div class="order_box float-right">
-						<div onclick="checkorder(` + food[i].id + `)" class="order_button float-right pt-2">
+						<div onclick="checkorder(` + product[i].id + `)" class="order_button float-right pt-2">
 							<i class="fa fa-plus" aria-hidden="true"></i>
 						</div>
 					</div>
@@ -1202,31 +1185,31 @@
 				</div>
 			</div>
 		</div>`;
-                document.getElementById("prinf_food").innerHTML += prinf;
+                document.getElementById("printFood").innerHTML += print;
             }
         }
 
         function ChangePassword() {
             var account = JSON.parse(localStorage.getItem('account'));
-            if (document.getElementById("passcurrent").value == account[checkLogin].password && document.getElementById("passnew").value == document.getElementById("passnewrepeat").value) {
-                account[checkLogin].password = document.getElementById("passnew").value;
+            if (document.getElementById("currentPassword").value == account[checkLogin].password && document.getElementById("newPassword").value == document.getElementById("passnewrepeat").value) {
+                account[checkLogin].password = document.getElementById("newPassword").value;
                 localStorage.setItem("account", JSON.stringify(account));
-                document.getElementById("notification_change_pass").innerHTML = "Contraseña cambiada exitosamente";
+                document.getElementById("passwordChangeNotification").innerHTML = "Contraseña cambiada exitosamente";
 
                 setTimeout(() => location.reload(), 1000);
 
             } else {
-                document.getElementById("notification_change_pass").innerHTML = "La información proporcionada es incorrecta";
+                document.getElementById("passwordChangeNotification").innerHTML = "La información proporcionada es incorrecta";
             }
         }
 
         function LogOut() {
-            document.getElementById("menu_account_login").style.display = 'none';
-            document.getElementById("menu_login_button").style.display = 'block';
-            document.getElementById("menu_logout").style.display = 'none';
+            document.getElementById("accountMenuLogin").style.display = 'none';
+            document.getElementById("loginMenuButton").style.display = 'block';
+            document.getElementById("logOutMenu").style.display = 'none';
             checkLogin = -1;
             localStorage.setItem("checkLogin", JSON.stringify(checkLogin));
-            document.getElementById("order_number").innerHTML = '0';
+            document.getElementById("orderNumber").innerHTML = '0';
             document.getElementById("printOrderCart").innerHTML = '';
             document.getElementById("payment_form").style.display = 'none';
             document.getElementById("checkout_form").style.display = 'block';
@@ -1234,14 +1217,13 @@
             document.getElementById("customerPhoneNumber").value = '';
             document.getElementById("customerAddress").value = '';
 
-
         }
     </script>
 
     <script type="text/javascript">
         function LoadAll() {
             PrintUserPayment();
-            listFood();
+            ListFood();
         }
     </script>
 
