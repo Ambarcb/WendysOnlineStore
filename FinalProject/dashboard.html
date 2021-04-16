@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Admin dashboard | wendys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png">
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png" type="images/png" />
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png" type="images/png" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body onload="onloadAll1()">
+    <div class="container-fluid p-0">
+        <div class="row m-0 p-0">
+
+            <div class="col-2 pl-0 p-0" style="height: 100vh;">
+                <div style="position: fixed;width: 220px;">
+                    <p class="text-center font-weight-bold mt-3 mb-4" style="font-size: 120%"><a href=index.html>Volver a inicio</a></p>
+                    <div onclick="showAdd_food()" id="add_food3" class="add_produre mt-3" style="width: 80%;background: #ff6f47;margin: auto;border-radius: 10px;padding: 12px;">
+                        <p class="mb-0 text-white">Agregar producto al menú &nbsp&nbsp<i class="fa fa-plus" aria-hidden="true"></i></p>
+                    </div>
+                    <div class="add_produre mt-4" style="width: 85%;margin: auto;border-radius: 10px;display: flex;">
+                        <div class="icon_bar" style="width: 16%;padding: 7px;">
+                            <img src="images/Group 261.svg">
+                        </div>
+                        <style type="text/css">
+
+                        </style>
+                        <script type="text/javascript">
+                            $(document).ready(function() {
+                                $('#add_food3').click(function() {
+                                    $('#management_food').css('font-weight', 'bold');
+                                    $('#dashboard_text').css('font-weight', '400');
+                                    $('#management_order').css('font-weight', '400');
+                                    $('#management_user').css('font-weight', '400');
+
+                                    $('#management_food_box').css('display', 'block');
+                                    $('#dashboard_box').css('display', 'none');
+                                    $('#management_food_order').css('display', 'none');
+                                    $('#management_user_box').css('display', 'none');
+
+                                });
+                            });
+
+                            $(document).ready(function() {
+                                $('#management_food').click(function() {
+                                    $('#management_food').css('font-weight', 'bold');
+                                    $('#dashboard_text').css('font-weight', '400');
+                                    $('#management_order').css('font-weight', '400');
+                                    $('#management_user').css('font-weight', '400');
+
+                                    $('#management_food_box').css('display', 'block');
+                                    $('#dashboard_box').css('display', 'none');
+                                    $('#management_food_order').css('display', 'none');
+                                    $('#management_user_box').css('display', 'none');
+
+                                });
+                            });
+                            $(document).ready(function() {
+                                $('#dashboard_text').click(function() {
+                                    $('#dashboard_text').css('font-weight', 'bold');
+                                    $('#management_order').css('font-weight', '400');
+                                    $('#management_user').css('font-weight', '400');
+                                    $('#management_food').css('font-weight', '400');
+
+                                    $('#management_food_box').css('display', 'none');
+                                    $('#dashboard_box').css('display', 'block');
+                                    $('#management_food_order').css('display', 'none');
+                                    $('#management_user_box').css('display', 'none');
+                                });
+                            });
+                            $(document).ready(function() {
+                                $('#management_order').click(function() {
+                                    $('#management_order').css('font-weight', 'bold');
+                                    $('#management_user').css('font-weight', '400');
+                                    $('#management_food').css('font-weight', '400');
+                                    $('#dashboard_text').css('font-weight', '400');
+
+                                    $('#management_food_box').css('display', 'none');
+                                    $('#dashboard_box').css('display', 'none');
+                                    $('#management_food_order').css('display', 'block');
+                                    $('#management_user_box').css('display', 'none');
+                                });
+                            });
+                            $(document).ready(function() {
+                                $('#management_user').click(function() {
+                                    $('#management_user').css('font-weight', 'bold');
+                                    $('#management_food').css('font-weight', '400');
+                                    $('#dashboard_text').css('font-weight', '400');
+                                    $('#management_order').css('font-weight', '400');
+
+                                    $('#management_food_box').css('display', 'none');
+                                    $('#dashboard_box').css('display', 'none');
+                                    $('#management_food_order').css('display', 'none');
+                                    $('#management_user_box').css('display', 'block');
+                                });
+                            });
+                        </script>
+                        <div class="text_bar p-2 pr-0">
+                            <p id="dashboard_text" class="mb-0" style="font-weight: bold;">Dashboard</p>
+                        </div>
+                    </div>
+
+                    <div class="add_produre mt-2" style="width: 85%;margin: auto;border-radius: 10px;display: flex;">
+                        <div class="icon_bar" style="width: 16%;padding: 7px;">
+                            <img src="images/ic_settings_24px.svg">
+                        </div>
+                        <div class="text_bar p-2 pr-0" style="width: 80%;">
+                            <p id="management_food" class="mb-0">Administrar menú</p>
+                        </div>
+                    </div>
+
+                    <div class="add_produre mt-2" style="width: 85%;margin: auto;border-radius: 10px;display: flex;">
+                        <div class="icon_bar" style="width: 16%;padding: 7px;">
+                            <img src="images/ic_shopping_cart_24px.svg">
+                        </div>
+                        <div class="text_bar p-2 pr-0" style="width: 80%;">
+                            <p id="management_order" class="mb-0">Administrar órdenes</p>
+                        </div>
+                    </div>
+
+                    <div class="add_produre mt-2" style="width: 85%;margin: auto;border-radius: 10px;display: flex;">
+                        <div class="icon_bar" style="width: 16%;padding: 7px;">
+                            <img src="images/ic_account_box_24px.svg">
+                        </div>
+                        <div class="text_bar p-2 pr-0" style="width: 80%;">
+                            <p id="management_user" class="mb-0">Administrar cuentas</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-10  p-0">
+                <div class="row m-0 p-0 ">
+                    <div class="col-12 bg-white" style="height: 70px;">
+
+                    </div>
+                    <div id="dashboard_box" class="col-12 bg-white mt-1" style="height: 570px;">
+                        <p class="font-weight-bold" style="font-size: 130%">Dashboard</p>
+                        <div id="input_food" style="display: none;">
+
+                        </div>
+
+                        <div class="row m-0">
+                            <div class="col-xs-12 col-sm-6 col-md-3 p-3">
+                                <div class="ana_food pt-2 pb-0 pl-4 pr-3 shadow-sm" style="background: #fff;">
+                                    <p style="font-size: 110%" class="float-left mt-1">Productos registrados</p>
+                                    <p id="dem_food" style="font-size: 200%;font-weight: bold;" class="float-right mt-4 mb-2"></p>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 p-3">
+                                <div class="ana_food pt-2 pb-0 pl-4 pr-3 shadow-sm" style="background: #fff;">
+                                    <p style="font-size: 110%" class="float-left mt-1">Clientes</p>
+                                    <p id="dem_cus" style="font-size: 200%;font-weight: bold;" class="float-right mt-4 mb-2"></p>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 p-3">
+                                <div class="ana_food pt-2 pb-0 pl-4 pr-3 shadow-sm" style="background: #fff;">
+                                    <p style="font-size: 110%" class="float-left mt-1">Órdenes</b>
+                                    </p>
+                                    <p id="dem_payment" style="font-size: 200%;font-weight: bold;" class="float-right mt-4 mb-2"></p>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-3 p-3">
+                                <div class="ana_food pt-2 pb-0 pl-4 pr-3 shadow-sm" style="background: #fff;">
+                                    <p style="font-size: 110%;" class="float-left mt-1">Comentarios</p>
+                                    <p id="dem_comment" style="font-size: 200%;font-weight: bold;" class="float-right mt-4 mb-2"></p>
+                                    <div style="clear: both;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row m-0">
+                            <div class="col-6 p-3">
+                                <div class="payment_food_dash pt-2 pb-0 pl-4 pr-3 shadow-sm" style="height: 300px;background: #fff">
+                                    <p style="font-size: 110%; font-weight: bold;" class=" mt-1">Órdenes</p>
+                                    <div id="scroll_height" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:220px;overflow-y: scroll;padding-right: 10px;">
+                                        <table class="table table-borderless" style="margin-top: -25px;">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 80%;font-size: 115%;"></th>
+
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="prinfPaymentDash">
+
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-6 p-3">
+                                <div class="payment_food_dash pt-2 pb-0 pl-4 pr-3 shadow-sm" style="height: 300px;background: #fff">
+                                    <p style="font-size: 110%; font-weight: bold;" class=" mt-1">Productos registrados</p>
+                                    <div id="scroll_height2" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:220px;overflow-y: scroll;padding-top: -5px;padding-right: 10px;">
+                                        <table class="table table-borderless" style="margin-top: -25px;">
+                                            <thead>
+                                                <tr>
+
+                                                    <th scope="col" style="width: 60%;font-size: 115%;"></th>
+
+                                                    <th scope="col" style="width: 40%;font-size: 115%;" class="text-center"></th>
+
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="prinfManagementFood2">
+
+
+                                            </tbody>
+
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-6 p-3">
+                                <div class="payment_food_dash pt-2 pb-0 pl-4 pr-3 shadow-sm" style="height: 300px;background: #fff">
+                                    <p style="font-size: 110%; font-weight: bold;" class="float-left mt-1">Comentarios</p>
+                                    <div id="scroll_height2" data-spy="scroll" data-target="#myScrollspy" data-offset="10">
+                                        <table style="width: 100%">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col" style="width: 20%;font-size: 115%;">ID</th>
+                                                    <th scope="col" style="width: 40%;font-size: 115%;">Nombre del cliente</th>
+                                                    <th scope="col" style="width: 40%;font-size: 115%;">Comentario</th>
+                                                </tr>
+                                            </thead>
+
+                                            <tbody id="commentPrinf">
+                                                <tr>
+                                                    <td>jfj</td>
+                                                    <td>jfj</td>
+                                                    <td>jfj</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="management_food_order" class="col-12" style="display: none;">
+                <p class="font-weight-bold" style="font-size: 130%">Órdenes</p>
+                <div class="shadow-sm pt-2" style="width: 100%;height: 530px;background: #fff;">
+                    <div id="scroll_height" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:480px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+                        <div class="cart_box pl-5 pt-0 pb-4 pr-4" style="width: 100%;margin: auto;">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" style="width: 20%;font-size: 115%;">Nombre del cliente</th>
+                                        <th scope="col" style="width: 44%;font-size: 115%;" class="text-center">Orden</th>
+                                        <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Monto total</th>
+                                        <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Status</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="prinfPayment">
+
+
+                                </tbody>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="management_user_box" class="col-12 bg-white mt-1" style="height: 570px;display: none;">
+                <p class="font-weight-bold" style="font-size: 130%">Administrar cuentas</p>
+                <button onclick="showAddUser()" class="btn btn-primary">Agregar cuenta</button>
+                <div id="input_user" style="display: none;">
+                    <div class="row m-0 shadow-sm pt-3">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="userNameAddInput" placeholder="Ingrese el nombre de usuario">
+                                <input class="float-right" type="text" id="txtId" name="txtPrice" style="border:0; border-radius: 10px;height: 40px;background:#f8fafd;width:100%;outline: none;display: none;">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Contraseña</label>
+                                <input type="email" class="form-control" id="passwordAddInput" placeholder="Ingrese la contraseña">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Repita la contraseña</label>
+                                <input type="password" class="form-control" id="rePasswordAddInput" placeholder="Ingrese la contraseña nuevamente">
+                            </div>
+                        </div>
+
+                        <div class="col-8 p-0  pl-3 pb-4">
+                            <button id="addUser" onclick="AddUser()" class="btn btn-primary float-left" style="background: #ff6f47;border: 1px solid #ff6f47;">Agregar</button>
+                            <button id="updateUser" onclick="SaveUserAdmin()" class="btn btn-warning text-white float-left" style="display: none;">Usuario agregado</button>
+                            <button onclick="CloseUser()" class="btn btn-danger text-white ml-1">Cancelar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="input_change_user" style="display: none;">
+                    <div class="row m-0 shadow-sm pt-3">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre de usuario</label>
+                                <input type="text" class="form-control" id="userNameChangeInput" placeholder="Ingrese el nombre de usuario">
+                                <input class="float-right" type="text" id="txtId" name="txtPrice" style="border:0; border-radius: 10px;height: 40px;background:#f8fafd;width:100%;outline: none;display: none;">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Dirección</label>
+                                <input type="text" class="form-control" id="addressChangeInput" placeholder="Ingrese la dirección">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Número telefónico</label>
+                                <input type="text" class="form-control" id="phoneChangeInput" placeholder="Ingrese el número telefónico">
+                            </div>
+                        </div>
+
+
+                        <div class="col-8 p-0  pl-3 pb-4">
+                            <button id="updateUser" onclick="SaveUserAdmin()" class="btn btn-warning text-white float-left">Actualizar</button>
+                            <button onclick="CloseUser()" class="btn btn-danger text-white ml-1">Cancelar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="cart_box pl-5 pt-4 shadow-sm mt-3 pb-4" style="width: 100%;margin: auto;">
+                    <div id="scroll_height" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:450px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+                        <table class="table table-borderless">
+                            <thead>
+
+                            </thead>
+
+                            <tbody>
+                                <div id="prinfManagementUser" class="row m-0">
+
+
+                                </div>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div id="management_food_box" class="col-12 bg-white mt-1" style="height: 570px;display: none;">
+                <p class="font-weight-bold" style="font-size: 130%">Administrar menú</p>
+                <div id="input_food2" style="display: none; background-color: transparent;">
+                    <div class="row m-0 shadow-sm pt-3">
+                        <div class="col-3">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Nombre</label>
+                                <input type="text" class="form-control" id="foodAddNameInput" placeholder="Ingrese el nombre del producto">
+                                <input class="float-right" type="text" id="txtId" name="txtPrice" style="border:0; border-radius: 10px;height: 40px;background:#f8fafd;width:100%;outline: none;display: none;">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Descripción</label>
+                                <input type="email" class="form-control" id="foodAddNoteInput" placeholder="Ingrese la descripción del producto">
+                            </div>
+                        </div>
+                        <div class="col-3" style="height: 100px;">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Precio</label>
+                                <input type="number" class="form-control" id="foodAddPriceInput" placeholder="Ingrese el precio del producto">
+                            </div>
+                        </div>
+                        <div class="col-3 p-0 pt-3 pl-3" style="height: 100px;">
+                            <div class="btn btn-rounded waves-effect btn-sm" style="border-radius: 10px;width: 90%;background: #ff6f47">
+                                <span class="text-white">Inserte la imagen del producto</span>
+                                <input class="text-white" type="file" type="file" name="file" id="foodAddImageInput">
+                            </div>
+                        </div>
+                        <div class="col-8 p-0  pl-3 pb-4">
+                            <button id="addfood2" onclick="AddFood()" class="btn btn-primary float-left" style="background: #ff6f47;border: 1px solid #ff6f47;">Agregar</button>
+                            <button id="updatefood2" onclick="SaveUpdateFood()" class="btn btn-warning text-white float-left" style="display: none;">Actualizar</button>
+                            <button onclick="CloseFood()" class="btn btn-danger text-white ml-1">Cancelar</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="cart_box pl-5 pt-4 shadow-sm mt-3 pb-4" style="width: 100%;margin: auto;">
+                    <div id="scroll_height2" data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:450px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+
+                                    <th scope="col" style="width: 40%;font-size: 115%;">Producto</th>
+
+                                    <th scope="col" style="width: 20%;font-size: 115%;" class="text-center">Precio</th>
+                                    <th scope="col" style="width: 20%;font-size: 115%;" class="text-center">Acción</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="prinfManagementFood">
+
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+
+<script type="text/javascript">
+    function CloseFood() {
+        document.getElementById('input_food2').style.display = 'none';
+        document.getElementById('scroll_height2').style.height = '450px';
+
+    }
+
+    function showAdd_food() {
+        document.getElementById('scroll_height2').style.height = '280px';
+        document.getElementById('addfood2').style.display = 'block';
+        document.getElementById('updatefood2').style.display = 'none';
+        document.getElementById('input_food2').style.display = 'block';
+        document.getElementById('foodAddNameInput').value = '';
+        document.getElementById('foodAddNoteInput').value = '';
+        document.getElementById('foodAddPriceInput').value = '';
+        document.getElementById('foodAddImageInput').value = '';
+
+    }
+
+
+    var food = JSON.parse(localStorage.getItem('food'));
+    document.getElementById("dem_food").innerHTML = food.length;
+
+
+    var account = JSON.parse(localStorage.getItem('account'));
+    document.getElementById("dem_cus").innerHTML = account.length;
+    var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+    document.getElementById("dem_payment").innerHTML = paymentFood.length - 1;
+
+    var commentCustomer = JSON.parse(localStorage.getItem('commentCustomer'));
+    document.getElementById("dem_comment").innerHTML = commentCustomer.length - 1;
+
+    var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+    if (paymentFood === null) {
+        paymentFood = [];
+        var paymentFood = [{}];
+        localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+    }
+    var incrementFoodId = JSON.parse(localStorage.getItem('incrementFoodId'));
+    if (incrementFoodId === null) {
+        incrementFoodId = [];
+        var incrementFoodId = 8;
+        localStorage.setItem("incrementFoodId", JSON.stringify(incrementFoodId));
+    }
+
+    function AddFood() {
+        var id = incrementFoodId;
+        var name = document.getElementById('foodAddNameInput').value;
+        var note = document.getElementById('foodAddNoteInput').value;
+        var price = document.getElementById('foodAddPriceInput').value;
+        var image2 = document.getElementById('foodAddImageInput').value;
+        var image = "image/" + image2.split('\\')[2];
+        if (name != '' && price != '' && note != '' && image2 != '') {
+
+            var pushFood = {
+                id,
+                name,
+                price,
+                note,
+                image
+            };
+            food.push(pushFood);
+            localStorage.setItem("food", JSON.stringify(food));
+            incrementFoodId++;
+            localStorage.setItem("incrementFoodId", JSON.stringify(incrementFoodId));
+            ManagementFood();
+            console.log(food);
+
+            var name = document.getElementById('foodAddNameInput').value = '';
+            var note = document.getElementById('foodAddNoteInput').value = '';
+            var price = document.getElementById('foodAddPriceInput').value = '';
+            var image = document.getElementById('foodAddImageInput').value = '';
+        } else {
+            alert("Por favor rellene todos los campos requeridos");
+        }
+    }
+
+    function DeleteFood(id) {
+        for (var i = 0; i < food.length; i++) {
+            if (id == food[i].id) {
+                food.splice(i, 1);
+
+                localStorage.setItem("food", JSON.stringify(food));
+                ManagementFood();
+            }
+
+        }
+    }
+
+    function UpdateFood(id) {
+        for (var i = 0; i < food.length; i++) {
+            if (id == food[i].id) {
+                document.getElementById('input_food2').style.display = 'block';
+                document.getElementById("addfood2").style.display = 'none';
+                document.getElementById("updatefood2").style.display = 'block';
+                document.getElementById("txtId").value = food[i].id;
+                document.getElementById("foodAddNameInput").value = food[i].name;
+                document.getElementById("foodAddNoteInput").value = food[i].note;
+                document.getElementById("foodAddPriceInput").value = food[i].price;
+                document.getElementById("foodAddImageInput").value = food[i].image;
+                break;
+            }
+        }
+    }
+
+    function SaveUpdateFood() {
+        var idchange = document.getElementById("txtId").value;
+
+        for (var i = 0; i < food.length; i++) {
+            if (idchange == food[i].id) {
+                food[i].name = document.getElementById("foodAddNameInput").value;
+                food[i].price = document.getElementById("foodAddPriceInput").value;
+                food[i].note = document.getElementById("foodAddNoteInput").value;
+                var imageChange = document.getElementById('foodAddImageInput').value;
+                localStorage.setItem("food", JSON.stringify(food));
+                if (imageChange == '') {
+
+                } else {
+                    var image1 = imageChange.split('\\')[2];
+                    food[i].image = image1;
+                }
+
+                if (food[i].type == 0 && imageChange != '') {
+
+                    food.splice(i, 1);
+                    localStorage.setItem("food", JSON.stringify(food));
+                    AddFood();
+                    ManagementFood();
+
+                }
+                ManagementFood();
+                break;
+            }
+        }
+
+        document.getElementById('foodAddNameInput').value = '';
+        document.getElementById('foodAddNoteInput').value = '';
+        document.getElementById('foodAddPriceInput').value = '';
+        document.getElementById('foodAddImageInput').value = '';
+        document.getElementById("addfood").style.display = 'block';
+        document.getElementById("updatefood").style.display = 'none';
+    }
+
+
+    function ManagementFood() {
+        document.getElementById("prinfManagementFood").innerHTML = '';
+        var food = JSON.parse(localStorage.getItem('food'));
+        for (let i = 0; i < food.length; i++) {
+            var prinfManage = `<tr>
+      <td><div>
+        <div class="cart_img_box float-left bg-warning" style="width: 30%;height: 80px;">
+          <img src="` + food[i].image + `" width="100%" height="130%">
+        </div>
+        <div class="cart_info_box float-left pl-3" style="width: 70%;height: 80px;">
+          <p class="mb-1 font-weight-bold" style="font-size: 115%;">` + food[i].name + `</p>
+          <p style="font-size: 85%">` + food[i].note + `</p>
+        </div>
+      </div> </td>
+      
+      <td class="text-center"><p class="mt-2" style="padding:5px;">` + food[i].price + `</p> </td>
+      <td class="text-center">'<div class="btn btn-danger text-white ml-2" onclick="DeleteFood(` + food[i].id + `)" style="width: 16%;border-radius: 10px;"><i class="fa fa-trash" aria-hidden="true"></i></div>
+  <div class="btn btn-warning  text-white mr-2" onclick="UpdateFood(` + food[i].id + `)" style="width: 16%;border-radius: 10px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div> </td>
+</tr>`;
+            document.getElementById("prinfManagementFood").innerHTML += prinfManage;
+        }
+    }
+
+    function ManagementFood2() {
+        document.getElementById("prinfManagementFood2").innerHTML = '';
+        var food = JSON.parse(localStorage.getItem('food'));
+        for (let i = 0; i < food.length; i++) {
+            var prinfManage = `<tr>
+            <td><div>
+            <div class="cart_img_box float-left bg-warning" style="width: 30%;height: 80px;">
+            <img src="` + food[i].image + `" width="100%" height="100%">
+            </div>
+            <div class="cart_info_box float-left pl-3" style="width: 70%;height: 80px;">
+            <p class="mb-1 font-weight-bold" style="font-size: 115%;">` + food[i].name + `</p>
+            <p style="font-size: 75%; text-align:justify">` + food[i].note + `</p>
+            </div>
+      </div> </td>
+      
+      <td class="text-center"><p class="mt-2" style="padding:5px;">` + food[i].price + `</p> </td>
+    
+</tr>`;
+            document.getElementById("prinfManagementFood2").innerHTML += prinfManage;
+        }
+    }
+
+
+
+    function paymentPrinf() {
+        document.getElementById("prinfPayment").innerHTML = '';
+
+        var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+        for (let i = 1; i < paymentFood.length; i++) {
+
+            var prinf_payment_cart = `<tr style="border-bottom:1px solid #ccc;">
+      <td>
+      <p>Nombre del cliente: ` + paymentFood[i].name_customer + `</p>
+      <p>Dirección: ` + paymentFood[i].customerAddress + `</p>
+      <p>Número telefónico: ` + paymentFood[i].customerPhoneNumber + `</p>
+       <p>Método de pago: ` + paymentFood[i].paymentMethod + `</p>
+      </td>
+      
+      <td>` + paymentFood[i].showOrderDetail + `<p id="commentPrinfPayment` + paymentFood[i].paymentId + `"></p></td>
+      <td class="text-center">` + paymentFood[i].priceTotal + `</td>
+      <td class="text-center"><button id="printStatus` + paymentFood[i].paymentId + `" onclick="verify_payment(` + paymentFood[i].paymentId + `)" class="btn btn-warning text-white">` + paymentFood[i].status + `</button></td>
+    </tr>
+    `
+            document.getElementById("prinfPayment").innerHTML += prinf_payment_cart;
+        }
+
+    }
+
+    function paymentPrinfDash() {
+        document.getElementById("prinfPaymentDash").innerHTML = '';
+
+        var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+        for (let i = 1; i < paymentFood.length; i++) {
+
+            var prinf_payment_cart = `<tr style="border-bottom:1px solid #ccc;">
+      
+      <td>` + paymentFood[i].showOrderDetail + `</td>
+ 
+     
+    </tr>
+    `
+            document.getElementById("prinfPaymentDash").innerHTML += prinf_payment_cart;
+        }
+
+    }
+
+    function verify_payment(id) {
+        for (let i = 0; i < paymentFood.length; i++) {
+            if (id == paymentFood[i].paymentId) {
+                paymentFood[i].status = "En entrega";
+                localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+                document.getElementById("printStatus" + id).innerHTML = paymentFood[i].status;
+            }
+        }
+    }
+
+
+    function commentPrinf() {
+        document.getElementById("commentPrinf").innerHTML = '';
+
+        var commentCustomer = JSON.parse(localStorage.getItem('commentCustomer'));
+        var account = JSON.parse(localStorage.getItem('account'));
+        for (let i = 1; i < commentCustomer.length; i++) {
+
+            var prinf_comment = `<td>` + commentCustomer[i].idPayment + `</td>
+    <td>` + account[commentCustomer[i].idUser].username + `</td>
+    <td>` + commentCustomer[i].content_comment + `</td>
+    `;
+            document.getElementById("commentPrinfPayment" + commentCustomer[i].idPayment).innerHTML = "Comentarios: " + commentCustomer[i].content_comment;
+            document.getElementById("commentPrinf").innerHTML += prinf_comment;
+        }
+
+    }
+</script>
+
+<script type="text/javascript">
+    function CloseUser() {
+        document.getElementById('input_user').style.display = 'none';
+        document.getElementById('scroll_height').style.height = '450px';
+
+    }
+
+    function showAddUser() {
+        document.getElementById('scroll_height').style.height = '280px';
+        document.getElementById('addUser').style.display = 'block';
+        document.getElementById('updateUser').style.display = 'none';
+        document.getElementById('input_user').style.display = 'block';
+        document.getElementById('input_change_user').style.display = 'none';
+        document.getElementById('foodAddNameInput').value = '';
+        document.getElementById('foodAddNoteInput').value = '';
+        document.getElementById('foodAddPriceInput').value = '';
+        document.getElementById('foodAddImageInput').value = '';
+    }
+
+    var accountInfo = [];
+
+    if (accountInfo === null) {
+        accountInfo = [];
+    }
+    var account = [];
+    var account = JSON.parse(localStorage.getItem('account'));
+    if (account === null) {
+        account = [];
+    }
+    var idChangeUser = 0;
+
+    function editUserAdmin(id) {
+        var accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
+        document.getElementById('input_user').style.display = 'none';
+        document.getElementById('input_change_user').style.display = 'block';
+
+        for (var i = 1; i < accountInfo.length; i++) {
+            if (id == accountInfo[i].accountPayment) {
+                idChangeUser = accountInfo[i].accountPayment;
+                document.getElementById("txtId").value = i;
+                document.getElementById("userNameChangeInput").value = accountInfo[i].name_customer;
+                document.getElementById("addressChangeInput").value = accountInfo[i].customerAddress;
+                document.getElementById("phoneChangeInput").value = accountInfo[i].customerPhoneNumber;
+                document.getElementById("paymentMethodChangeInput").value = accountInfo[i].paymentMethod;
+
+                break;
+            }
+        }
+    }
+
+    function SaveUserAdmin() {
+        var accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
+        for (var i = 0; i < accountInfo.length; i++) {
+            if (idChangeUser == accountInfo[i].accountPayment) {
+                accountInfo[i].name_customer = document.getElementById("userNameChangeInput").value;
+                accountInfo[i].customerAddress = document.getElementById("addressChangeInput").value;
+                accountInfo[i].customerPhoneNumber = document.getElementById("phoneChangeInput").value;
+                accountInfo[i].paymentMethod = document.getElementById("paymentMethodChangeInput").value;
+                localStorage.setItem("accountInfo", JSON.stringify(accountInfo));
+
+                ManagementUser();
+
+                break;
+            }
+        }
+
+        document.getElementById('userNameChangeInput').value = '';
+        document.getElementById('addressChangeInput').value = '';
+        document.getElementById('phoneChangeInput').value = '';
+        document.getElementById('paymentMethodChangeInput').value = '';
+
+    }
+
+    var idIncrement = JSON.parse(localStorage.getItem('idIncrement'));
+
+    function AddUser() {
+        var checkUsername = 0;
+        var id = idIncrement;
+        var username = document.getElementById('userNameAddInput').value;
+        var password = document.getElementById('passwordAddInput').value;
+        var repassword = document.getElementById('rePasswordAddInput').value;
+        var level = 0;
+        if (username != '' && password != '' && repassword != '' && password == repassword) {
+            for (let i = 0; i < account.length; i++) {
+                if (account[i].username == username) {
+                    alert("Este nombre de usuario ya existe");
+
+                    checkUsername = 1;
+                    break;
+                }
+
+            }
+            if (checkUsername == 0) {
+                accountSignupAdmin = {
+                    id,
+                    username,
+                    password,
+                    level
+                };
+                account.push(accountSignupAdmin);
+                localStorage.setItem("account", JSON.stringify(account));
+                idIncrement++;
+                localStorage.setItem("idIncrement", JSON.stringify(idIncrement));
+                console.log(account);
+                alert("Registro completado exitosamente");
+                ManagementUser();
+            }
+        } else {
+            alert("Debe rellenar todos los campos requeridos")
+        }
+    }
+
+    function deleteUserAdmin(id) {
+        var account = JSON.parse(localStorage.getItem('account'));
+        for (var i = 0; i < account.length; i++) {
+            if (id == account[i].id) {
+                account.splice(i, 1);
+                localStorage.setItem("account", JSON.stringify(account));
+                ManagementUser();
+                break;
+            }
+        }
+    }
+
+
+
+    function ManagementUser() {
+        document.getElementById("prinfManagementUser").innerHTML = '';
+        var account = JSON.parse(localStorage.getItem('account'));
+        for (let i = 0; i < account.length; i++) {
+            var prinfManage = `<div class="col-4" style="height: 100px;padding:10px; padding-right:50px;">
+      <div class="user_info_admin float-left" style="width: 60%">
+        <p class="font-weight-bold" style="font-size: 120%">` + account[i].username + `</p>
+      </div>
+      <div class="user_function_admin float-right" style="width: 40%;display: flex;">
+      <div class="btn btn-warning mr-1 text-white" onclick="editUserAdmin(` + account[i].id + `)" style="width: 40%;border-radius: 10px;"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
+        <div class="btn btn-danger text-white" onclick="deleteUserAdmin(` + account[i].id + `)" style="width: 40%;border-radius: 10px;"><i class="fa fa-trash" aria-hidden="true"></i></div>
+
+  
+    </div></div>`;
+            document.getElementById("prinfManagementUser").innerHTML += prinfManage;
+        }
+    }
+
+    function onloadAll1() {
+        paymentPrinf();
+        ManagementFood();
+        paymentPrinfDash();
+        ManagementFood2();
+        commentPrinf();
+        ManagementUser();
+    }
+</script>
+
+</html>

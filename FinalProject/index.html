@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Home | wendys</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" sizes="192x192" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png">
+    <link rel="shortcut icon" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png" type="images/png" />
+    <link rel="apple-touch-icon" href="https://static.wixstatic.com/media/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/086742_28f0f795e121439391d2681fdf70ee57%7Emv2.png" type="images/png" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+
+<body onload="LoadAll()">
+
+    <!-- Header section -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#" onclick="home_page()" class="active text-white">|Inicio|</a></li>
+                <li><a href="#menu">|Menú|</a></li>
+                <li><a href="#" data-toggle="modal" data-target=".orderCart">|Carrito|
+                            <div style="width: 20px;height: 20px;background: #fff;position: absolute;top: 15px;margin-left: 90px;border-radius: 50%">
+                                <p id="order_number" style="position: absolute;margin-top: -30px;margin-left: 6px;color: #0082e6;font-size: 80%">0</p>
+                            </div> </a></li>
+                <li><a href="#" id="menu_login_button" data-toggle="modal" data-target=".login">|Login|</a></li>
+                <li>
+                    <a id="menu_account_login" class="menu_account_hide" style="display: none;"></a>
+                </li>
+            </ul>
+        </nav>
+        <a href="index.html" class="label.logo"><img src="images/resizedLogo.png"></a>
+    </header>
+
+    <!-- End of Header section -->
+
+    <!-- Home section -->
+
+    <section id="home" class="container-fluid">
+
+        <div class="row min-vh-100 align-items-center">
+
+            <div class="col-md-8 ml-md-5 text-md-left text-center content">
+                <h1>Wendy's</h1>
+                <h2>La calidad es nuestra receta</h2>
+                <p>Obtén lo mejor de Wendy's desde cualquier parte y disfruta de nuestro sabor.</p>
+                <a href="#"><button>Empezar</button></a>
+            </div>
+
+            <div class="video-container">
+                <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
+                    <iframe src="https://giphy.com/embed/XiduEGuBbAnjEBrpDU" frameBorder="0" class="vid video" allowFullScreen></iframe>
+                    <iframe src="https://giphy.com/embed/6w5sJibXakTB8VGT6J" frameBorder="0" class="vid video2" allowFullScreen></iframe>
+                    <iframe src="https://giphy.com/embed/xT9DPtajG99AeiB3hu" frameBorder="0" class="vid video3" allowFullScreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <div class="dots dot1"></div>
+            <div class="dots dot2"></div>
+            <div class="dots dot3"></div>
+        </div>
+        </div>
+
+        <div id="menu_logout">
+            <div id="menu_header22" class="khung p-3" style="margin: 0 auto;width: 200px; background: #0082e6; border-radius: 8px; font-family: Helvetica, Arial, sans-serif;padding: 0.5rem;position: absolute;z-index: 999;margin-left: calc(100vw - 335px);margin-top: -690px;display: none;">
+                <p id="greetUser" class="text-white" style="opacity: 0.9"></p>
+
+                <div id="modalMenu" class="box p-1" style="height: 35px;display: none;">
+                    <a href="dashboard.html">
+                        <p><i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Dashboard</p>
+                    </a>
+                </div>
+                <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-lg22" style="height: 35px">
+
+                    <p><i class="fa fa-list-alt text-white mr-3" aria-hidden="true"></i>Órdenes</p>
+
+                </div>
+                <div class="box p-1" data-toggle="modal" data-target=".bd-example-modal-sm33" style="height: 35px">
+
+                    <p><i class="fa fa-key text-white mr-3" aria-hidden="true"></i>C/ contraseña</p>
+
+                </div>
+
+                <div class="box p-1" style="height: 35px">
+
+                    <p onclick="LogOut()"><i class="fa fa-sign-out text-white mr-3" aria-hidden="true"></i>Log out</p>
+                </div>
+            </div>
+        </div>
+        </nav>
+        </div>
+
+    </section>
+
+    <!-- End of Home section -->
+
+    <!-- Menu section -->
+
+    <section id="menu" class="container-fluid">
+
+        <div class="heading text-center">
+            <h1>Nuestro <span>menú</span></h1>
+        </div>
+
+        <div id="list_food_home" class="container">
+            <div class="row" id="prinf_food">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End of Menu section -->
+
+    <!-- Footer section -->
+
+    <section id="footer" class="container-fluid">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-4 brand">
+
+                <a class="logo"><img src="images/Wendys-Logo.png" alt="" height="60%" width="70%"></a>
+
+                <div class="icons">
+
+                    <a href="https://es-la.facebook.com/wendysRD/">
+                        <img src="https://img.icons8.com/color/48/000000/facebook.png" />
+                    </a>
+
+                    <a href="https://twitter.com/wendys/">
+                        <img src="https://img.icons8.com/color/48/000000/twitter-squared.png" />
+                    </a>
+
+                    <a href="https://www.instagram.com/wendysdr/">
+                        <img src="https://img.icons8.com/fluent/48/000000/instagram-new.png" />
+                    </a>
+
+                    <a href="https://www.pinterest.com/WendysOfficial/">
+                        <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgdmlld0JveD0iMCAwIDQ1NS43MzEgNDU1LjczMSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDU1LjczMSA0NTUuNzMxOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8Zz4NCgk8cmVjdCB4PSIwIiB5PSIwIiBzdHlsZT0iZmlsbDojQzkzNTNEOyIgd2lkdGg9IjQ1NS43MzEiIGhlaWdodD0iNDU1LjczMSIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMTYwLjYwMSwzODJDODYuMjIzLDM1MC45MTksMzcuODA3LDI2Mi4zNDMsNjguNTk4LDE3Mi4zODINCgkJQzk5LjA1Nyw4My4zOTEsMTk3LjU4OSwzNi43ODgsMjg2LjMwOSw2OS43MzRjODguOTcyLDMzLjA0LDEzMi45NzgsMTMxLjIxMyw5OC40ODYsMjE5LjIyDQoJCWMtMzUuNzA5LDkxLjExMi0xMzEuNDQyLDEyMy4zNDgtMjAzLjIyLDEwMC42MTdjNS4zNjYtMTMuMjUzLDExLjQ3Mi0yNi4zMywxNS45NDUtMzkuOTQzYzQuNDkyLTEzLjY3Miw3LjM1Ni0yNy44NzgsMTAuNzI1LTQxLjAzNw0KCQljMi45LDIuNDQsNS44MTQsNS4wMjcsOC44NjYsNy40MzljMTUuODYxLDEyLjUzNSwzMy44MDUsMTMuNzUyLDUyLjYwNSw5LjIzMmMxOS45NzctNC44MDMsMzUuNzY0LTE2LjEzLDQ3LjQ1NS0zMi43OA0KCQljMTkuNzczLTI4LjE2LDI2Ljc1MS02MC4wMTksMjEuOTcyLTkzLjU0NmMtNC45NDItMzQuNjY4LTI1LjQ2OS01OS43NTYtNTcuNjUtNzIuMzg5Yy00OC40ODctMTkuMDM0LTk0LjQ1My0xMi42MjYtMTM0LjI2OSwyMi4yNTkNCgkJYy0zMC42MjIsMjYuODMtNDAuOTE2LDcyLjMxNC0yNi4xODcsMTA3LjcyNGM1LjEwNSwxMi4yNzQsMTMuMTczLDIxLjkwNywyNS4zNzksMjcuNjk1YzYuMTg2LDIuOTMzLDguODEyLDEuNzM3LDEwLjYwMi00LjcyNA0KCQljMC4xMzMtMC40ODEsMC4yOTUtMC45NTUsMC40NzEtMS40MjJjMy40MjgtOS4wNCwyLjYyOC0xNi40NzItMy40NzMtMjUuMTk5Yy0xMS4xMTgtMTUuOTA2LTkuMTM1LTM0LjMxOS0zLjc3MS01MS45NjENCgkJYzEwLjE3Mi0zMy40NTUsNDAuMDYyLTU1Ljc3Nyw3NS4xMTYtNTYuMTAxYzkuMzktMC4wODcsMTkuMDU2LDAuNzE4LDI4LjE1LDIuOTM3YzI3LjA0OSw2LjU5OSw0NC41MTQsMjcuNTE4LDQ2LjI2NCw1NS4yNTMNCgkJYzEuNDA0LDIyLjI0Mi0yLjA3Miw0My44NDktMTEuNzQyLDY0LjE1OWMtNC43ODgsMTAuMDU1LTExLjEwNywxOC45OTYtMjAuNTEyLDI1LjMyNWMtOC44MzUsNS45NDUtMTguNDk2LDguMzQxLTI4Ljk3OSw1LjYwMg0KCQljLTE0LjQ0My0zLjc3NC0yMi42NDItMTYuOTUtMTguOTg5LTMxLjQwN2MzLjc4Ni0xNC45ODUsOC42ODUtMjkuNjksMTIuMzk5LTQ0LjY5YzEuNTctNi4zNDQsMi4zOTUtMTMuMjM0LDEuNzUxLTE5LjY5Ng0KCQljLTEuNzU3LTE3LjYwMS0xOC4zODctMjUuODA5LTMzLjkzMy0xNy4yMTZjLTEwLjg4OSw2LjAxOS0xNi4xMzIsMTYuMDc5LTE4LjU2NCwyNy43MTljLTIuNTA1LDExLjk5Mi0xLjI5MiwyMy44MTEsMi42MSwzNS40MzkNCgkJYzAuNzg0LDIuMzM3LDAuOSw1LjIyNCwwLjM0Nyw3LjYzNGMtNy4wNjMsMzAuNzk5LTE0LjYxNyw2MS40OS0yMS4zMDYsOTIuMzY5Yy0xLjk1Miw5LjAxMS0xLjU5LDE4LjUyNy0yLjIzOSwyNy44MTUNCgkJQzE2MC40OTUsMzc3LjgzOSwxNjAuNjAxLDM3OS42MzUsMTYwLjYwMSwzODJ6Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="
+                            height="7%" width="7%" />
+                    </a>
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <h1>&copy; copyright @ 2021 by <span> Grupo 3</span></h1>
+
+    </section>
+
+
+    <!-- End of Footer section -->
+
+    <div class="modal fade bd-example-modal-lg22" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content p-3" style="width: 150%;left: -200px;">
+                <p class="font-weight-bold" style="font-size: 110%">Mis órdenes</p>
+
+                <div data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:520px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+                    <table class="table table-borderless">
+
+                        <thead>
+                            <tr>
+                                <th scope="col" style="width: 20%;font-size: 115%;">Nombre del cliente</th>
+                                <th scope="col" style="width: 44%;font-size: 115%;" class="text-center">Artículos</th>
+                                <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Monto total</th>
+                                <th scope="col" style="width: 18%;font-size: 115%;" class="text-center">Estado del pedido</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="printUserPayment">
+
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bd-example-modal-sm33 mt-5" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel33" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="iconpopup" style="margin: 0 auto; width: 27%;height: 100%; margin-top: 20%;">
+                    <img id="notick" src="https://img.icons8.com/plasticine/100/000000/double-tick.png" width="100%">
+                    <img id="errortick" src="https://img.icons8.com/fluent/68/000000/error-cloud.png" width="100%" style="display: none;" />
+                    <img id="changeimg" src="https://icons8.com/icon/119664/forgot-password" width="100%" style="display: none;">
+                </div>
+
+                <div id="changepass" class=" iconpopup mt-4" style="margin: 0 auto; width: 80%;margin-bottom: 10%;">
+                    <p class="text-center mb-3" style="font-weight: bold;margin-bottom: 2%;font-size: 120%">Cambiar contraseña</p>
+                    <p class="mt-3" style="margin-bottom: 2%;">Ingrese su contraseña actual</p>
+                    <input type="password" name="pass" id="passcurrent" class="form-control">
+                    <p class="mt-1" style="margin-bottom: 2%;">Ingrese su nueva contraseña</p>
+                    <input type="password" name="pass" id="passnew" class="form-control">
+                    <p class="mt-1" style="margin-bottom: 2%;">Repita su nueva contraseña</p>
+                    <input type="password" name="pass" id="passnewrepeat" class="form-control">
+                    <p id="notification_change_pass" class="mt-4 text-center mb-0" style="font-size: 90%;color: red;"></p>
+                    <button class="btn btn-warning float-right mt-3" onclick="ChangePassword()">Cambiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade login mt-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div class="cart_box" style="width: 100%;margin: auto;">
+                    <div class="login_img_box float-left" style="width: 50%;height: 450px;background: pink;">
+                        <img src="images/LoginModalLogo.jpg" width="105%" height="100%">
+                    </div>
+
+                    <div id="loginBox">
+                        <div class="login_info_box float-right p-5" style="width: 50%;height: 450px;">
+                            <p class="text-center font-weight-bold" style="font-size: 140%">Login</p>
+                            <label class="font-weight-bold mt-3">Nombre de usuario</label>
+                            <input id="usernameLogin" type="text" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su nombre de usuario" style="outline: none;">
+                            <label class="mt-3 font-weight-bold">Contraseña</label>
+                            <input id="passwordLogin" type="password" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su contraseña">
+                            <button onclick="Login()" class="btn btn-primary mt-4" style="width: 100%;background: #0082e6;border: 0;outline: none;">Ingresar</button>
+                            <p id="loginStatus" class="text-center mt-4" style="font-size: 90%;color: red;"></p>
+                            <p onclick="ShowSignUpModal()" class="text-center mt-3" style="font-size: 90%">¿No tienes una cuenta? Registrate<strong style="color:#0082e6"> aquí</strong> </p>
+                        </div>
+                    </div>
+
+                    <div id="signUpBox" style="display: none;">
+                        <div class="signup_info_box float-right p-4 pl-5 pr-5" style="width: 50%;height: 450px;">
+                            <p class="text-center font-weight-bold" style="font-size: 140%">Registro</p>
+                            <label class="font-weight-bold mt-1">Nombre de usuario</label>
+                            <input id="signUpUsername" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su nombre de usuario" style="outline: none;">
+                            <label class="mt-3 font-weight-bold">Contraseña</label>
+                            <input id="signUpPassword" type="password" class="form-control" aria-describedby="emailHelp" placeholder="Ingrese su contraseña">
+                            <label class="mt-3 font-weight-bold">Repita su contraseña</label>
+                            <input id="reSignUpPassword" type="password" class="form-control" aria-describedby="emailHelp" placeholder="Confirme su contraseña">
+                            <button onclick="SignUp()" class="btn btn-primary mt-4" style="width: 100%;background: #0082e6;border: 0;outline: none;">Registrar</button>
+                            <p id="signUpStatus" class="text-center mt-3 mb-1" style="font-size: 90%;color: red;"></p>
+                            <p onclick="ShowLoginModal()" class="text-center mt-0" style="font-size: 90%">¿Ya tienes una cuenta? Inicia sesión<strong style="color:#0082e6"> aquí­</strong> </p>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade orderCart mt-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <div id="checkout_form" class="cart_box pl-5 pt-4 shadow-sm mt-3 pb-4" style="width: 100%;margin: auto;">
+                    <p class="ml-2" style="font-size: 130%;font-weight: bold;">Mi carrito</p>
+                    <div data-spy="scroll" data-target="#myScrollspy" data-offset="10" style="height:340px;overflow-y: scroll;padding-top: 5px;padding-right: 10px;">
+                        <table class="table table-borderless">
+                            <thead>
+                                <tr>
+                                    <th scope="col" style="width: 40%;font-size: 115%;">Producto</th>
+                                    <th scope="col" style="width: 20%;font-size: 115%;" class="text-center">Cantidad</th>
+                                    <th scope="col" style="width: 20%;font-size: 115%;" class="text-center">Precio</th>
+                                    <th scope="col" style="width: 20%;font-size: 115%;" class="text-center">Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody id="printOrderCart">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="float-left pl-2" style="width: 30%;">
+                        <p class="font-weight-bold mt-2" style="font-size: 115%">Monto total</p>
+                    </div>
+                    <div class="float-right pr-5" style="width: 30%;">
+                        <p id="total_money" class="font-weight-bold float-right mt-2" style="font-size: 115%"> </p>
+                    </div>
+                    <div style="clear: both;"></div>
+                    <div onclick="CheckOut()" class="btn mr-5 text-white float-right" style="background: #32CD32;">Realizar pago</div>
+                    <div style="clear: both;"></div>
+                </div>
+
+                <div id="payment_form" class="p-5" style="width: 100%;height: 400px;display: none;">
+                    <div class="choose_box float-left" style="width: 60%;">
+                        <p class="font-weight-bold" style="font-size: 130%">Método de pago</p>
+                        <p class="mb-2 font-weight-bold">Elija su método de pago preferido</p>
+                        <div class="payment_choose_box" style="width: 60%">
+                            <div class="float-left pr-1 pb-1" style="width: 50%;height: 80px;">
+                                <img onclick="CashPayment()" class="payment_Cash" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDc4Ljg1NiA0NzguODU2IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NzguODU2IDQ3OC44NTY7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiM4Q0MxNTM7IiBkPSJNNDA2Ljg1NiwzNTguODczaC00MDB2LTE5Mmg0MDBWMzU4Ljg3M3oiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiM4N0I3NDg7IiBkPSJNMTUuNzQ0LDE2Ni44NzNsMjMuMTEyLTEwNGwzNTcuNTM2LDgwLjQ0OGwtNC4yMjQsMjMuNTUyIi8+DQo8cGF0aCBzdHlsZT0iZmlsbDojQTBENDY4OyIgZD0iTTI2Mi44NTYsMzI2Ljg3M2g2MC4yNjRsMzUuNzM2LTM0Ljg1NnYtMC42OTZ2LTU2Ljg5NmwtMzIuNTA0LTM1LjU1MmgtNjMuNDk2aC0xMjhINzQuNTkyDQoJbC0zNS43MzYsMzQuODU2djAuNjk2djU2Ljg5NmwzMi41MDQsMzUuNTUyaDYzLjQ5NkgyNjIuODU2eiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6IzdDQUEzMzsiIGQ9Ik05Ni4zODQsNzUuODE3bDI2LjI1Ni02Mi42OTZsMjYwLjIxNiwxMDguNDE2bC01LjcyOCwxNy40NDgiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiNGOENGMjY7IiBkPSJNMzEwLjg1Niw0MDYuODczdjMyYzAsMTMuMjU2LDM1LjgxNiwyNCw4MCwyNHM4MC0xMC43NDQsODAtMjR2LTMyIi8+DQo8Y2lyY2xlIHN0eWxlPSJmaWxsOiM4Q0MxNTM7IiBjeD0iMTk4Ljg1NiIgY3k9IjI2Mi44NzMiIHI9IjY0Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojQ0RBMzQ5OyIgZD0iTTMxMC44NTYsMzc0Ljg3M3YzMmMwLDEzLjI1NiwzNS44MTYsMjQsODAsMjRzODAtMTAuNzQ0LDgwLTI0di0zMiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0Y4Q0YyNjsiIGQ9Ik0zMTAuODU2LDM0Mi44NzN2MzJjMCwxMy4yNTYsMzUuODE2LDI0LDgwLDI0czgwLTEwLjc0NCw4MC0yNHYtMzIiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiNDREEzNDk7IiBkPSJNMzEwLjg1NiwzMTAuODczdjMyYzAsMTMuMjU2LDM1LjgxNiwyNCw4MCwyNHM4MC0xMC43NDQsODAtMjR2LTMyIi8+DQo8cGF0aCBzdHlsZT0iZmlsbDojRjhDRjI2OyIgZD0iTTMxMC44NTYsMjc4Ljg3M3YzMmMwLDEzLjI1NiwzNS44MTYsMjQsODAsMjRzODAtMTAuNzQ0LDgwLTI0di0zMiIvPg0KPHBhdGggc3R5bGU9ImZpbGw6I0NEQTM0OTsiIGQ9Ik0zMTAuODU2LDI0Ni44NzN2MzJjMCwxMy4yNTYsMzUuODE2LDI0LDgwLDI0czgwLTEwLjc0NCw4MC0yNHYtMzIiLz4NCjxlbGxpcHNlIHN0eWxlPSJmaWxsOiNGOENGMjY7IiBjeD0iMzkwLjg1NiIgY3k9IjI0Ni44NzMiIHJ4PSI4MCIgcnk9IjI0Ii8+DQo8cGF0aCBkPSJNNDA2Ljg1NiwxOTcuNzI5YzMuNzgyLDAuMDA0LDYuODUyLTMuMDU4LDYuODU2LTYuODRjMC0wLjAwNSwwLTAuMDExLDAtMC4wMTZ2LTI0YzAuMDA0LTMuNzgyLTMuMDU4LTYuODUyLTYuODQtNi44NTYNCgljLTAuMDA1LDAtMC4wMTEsMC0wLjAxNiwwaC00MDBjLTMuNzgyLTAuMDA0LTYuODUyLDMuMDU4LTYuODU2LDYuODRjMCwwLjAwNSwwLDAuMDExLDAsMC4wMTZ2MTkyDQoJYy0wLjAwNCwzLjc4MiwzLjA1OCw2Ljg1Miw2Ljg0LDYuODU2YzAuMDA1LDAsMC4wMTEsMCwwLjAxNiwwaDI3MmMzLjc4NiwwLDYuODU2LTMuMDcsNi44NTYtNi44NTZjMC0zLjc4Ni0zLjA3LTYuODU2LTYuODU2LTYuODU2DQoJSDEzLjcxMlYxNzMuNzI5SDQwMHYxNy4xNDRjLTAuMDA0LDMuNzgyLDMuMDU4LDYuODUyLDYuODQsNi44NTZDNDA2Ljg0NSwxOTcuNzI5LDQwNi44NTEsMTk3LjcyOSw0MDYuODU2LDE5Ny43MjlMNDA2Ljg1NiwxOTcuNzI5eg0KCSIvPg0KPHBhdGggZD0iTTM1LjE4NCw1Ny4wODFjLTEuNTM3LDAuOTc5LTIuNjI0LDIuNTI2LTMuMDI0LDQuMzA0bC0xNiw3MmMtMC44MjIsMy42OTgsMS41MSw3LjM2Miw1LjIwOCw4LjE4NA0KCWMzLjY5OCwwLjgyMiw3LjM2Mi0xLjUxLDguMTg0LTUuMjA4bDAsMGwxNC41MDQtNjUuMjg4bDMxMy4yOTYsNzAuNDg4YzAuNDk2LDAuMTE1LDEuMDAzLDAuMTcxLDEuNTEyLDAuMTY4DQoJYzMuNzg2LTAuMDA3LDYuODUtMy4wODIsNi44NDQtNi44NjhjLTAuMDA2LTMuMjAxLTIuMjI1LTUuOTcxLTUuMzQ4LTYuNjc2bC0zMjAtNzJDMzguNTg0LDU1Ljc4OSwzNi43MjMsNTYuMTExLDM1LjE4NCw1Ny4wODENCglMMzUuMTg0LDU3LjA4MXoiLz4NCjxwYXRoIGQ9Ik0xMTcuMDA4LDQ5Ljk0NWwxMy4xMjgtMjYuMjcybDE4Ni4wNzIsNzcuNTI4YzMuNTA0LDEuNDYyLDcuNTMtMC4xOTIsOC45OTItMy42OTZjMS40NjItMy41MDQtMC4xOTItNy41My0zLjY5Ni04Ljk5Mg0KCWwtMTkyLTgwYy0zLjMzNy0xLjM5MS03LjE4MiwwLjAzOC04LjgsMy4yNzJsLTE2LDMyYy0xLjgwNywzLjM0Mi0wLjU2Myw3LjUxNywyLjc4LDkuMzI0czcuNTE3LDAuNTYzLDkuMzI0LTIuNzgNCgljMC4wNzEtMC4xMzEsMC4xMzgtMC4yNjUsMC4yLTAuNDAxTDExNy4wMDgsNDkuOTQ1eiIvPg0KPHBhdGggZD0iTTMzMy4yMDgsMTk4Ljg3M2MwLTMuNzg2LTMuMDctNi44NTYtNi44NTYtNi44NTZoLTYzLjQ5NmMtMy43ODYsMC02Ljg1NiwzLjA3LTYuODU2LDYuODU2czMuMDcsNi44NTYsNi44NTYsNi44NTZsMCwwDQoJaDYzLjQ5NkMzMzAuMTM4LDIwNS43MjksMzMzLjIwOCwyMDIuNjYsMzMzLjIwOCwxOTguODczeiIvPg0KPHBhdGggZD0iTTE5OC44NTYsMzMzLjI3M2MzOC44ODEsMCw3MC40LTMxLjUxOSw3MC40LTcwLjRjMC0zOC44ODEtMzEuNTE5LTcwLjQtNzAuNC03MC40cy03MC40LDMxLjUxOS03MC40LDcwLjRsMCwwDQoJQzEyOC40OTYsMzAxLjczOCwxNTkuOTkyLDMzMy4yMzQsMTk4Ljg1NiwzMzMuMjczeiBNMTk4Ljg1NiwyMDUuMjczYzMxLjgxMiwwLDU3LjYsMjUuNzg4LDU3LjYsNTcuNnMtMjUuNzg4LDU3LjYtNTcuNiw1Ny42DQoJcy01Ny42LTI1Ljc4OC01Ny42LTU3LjZDMTQxLjI5MSwyMzEuMDc2LDE2Ny4wNTksMjA1LjMwOSwxOTguODU2LDIwNS4yNzN6Ii8+DQo8cGF0aCBkPSJNMzkwLjg1NiwyMTQuODczYy00Mi40LDAtODgsMTAuMDE2LTg4LDMydjE5MmMwLDIxLjk4NCw0NS42LDMyLDg4LDMyczg4LTEwLjAxNiw4OC0zMnYtMTkyDQoJQzQ3OC44NTYsMjI0Ljg4OSw0MzMuMjU2LDIxNC44NzMsMzkwLjg1NiwyMTQuODczeiBNNDYyLjg1Niw0MDYuNzUzYy0xLjIwOCw0LjQ0LTI1LjIsMTYuMTItNzIsMTYuMTJzLTcwLjc5Mi0xMS42OC03Mi0xNnYtMTIuNTc2DQoJYzE3LjAyNCw4LjU3Niw0NS4xNDQsMTIuNTc2LDcyLDEyLjU3NnM1NC45ODQtNC4wNCw3Mi0xMi41ODRWNDA2Ljc1M3ogTTQ2Mi44NTYsMzc0Ljc1M2MtMS4yMDgsNC40NC0yNS4yLDE2LjEyLTcyLDE2LjEyDQoJcy03MC43OTItMTEuNjgtNzItMTZ2LTEyLjU3NmMxNy4wMjQsOC41NzYsNDUuMTQ0LDEyLjU3Niw3MiwxMi41NzZzNTQuOTg0LTQuMDQsNzItMTIuNTg0VjM3NC43NTN6IE00NjIuODU2LDM0Mi43NTMNCgljLTEuMjA4LDQuNDQtMjUuMiwxNi4xMi03MiwxNi4xMnMtNzAuNzkyLTExLjY4LTcyLTE2di0xMi41NzZjMTcuMDI0LDguNTc2LDQ1LjE0NCwxMi41NzYsNzIsMTIuNTc2czU0Ljk4NC00LjA0LDcyLTEyLjU4NFYzNDIuNzUzDQoJeiBNNDYyLjg1NiwzMTAuNzUzYy0xLjIwOCw0LjQ0LTI1LjIsMTYuMTItNzIsMTYuMTJzLTcwLjc5Mi0xMS42OC03Mi0xNnYtMTIuNTc2YzE3LjAyNCw4LjUzNiw0NS4xNDQsMTIuNTc2LDcyLDEyLjU3Ng0KCXM1NC45ODQtNC4wNCw3Mi0xMi41ODRWMzEwLjc1M3ogTTQ2Mi44NTYsMjc4Ljc1M2MtMS4yMDgsNC40NC0yNS4yLDE2LjEyLTcyLDE2LjEycy03MC43OTItMTEuNjgtNzItMTZ2LTEyLjU3Ng0KCWMxNy4wMjQsOC41MzYsNDUuMTQ0LDEyLjU3Niw3MiwxMi41NzZzNTQuOTg0LTQuMDQsNzItMTIuNTg0VjI3OC43NTN6IE0zOTAuODU2LDIzMC44NzNjNDYuNCwwLDcwLjQsMTEuNDcyLDcyLDE2DQoJYy0xLjYsNC41MjgtMjUuNiwxNi03MiwxNmMtNDYuNzI4LDAtNzAuNzEyLTExLjY0OC03Mi0xNS44NTZ2LTAuMDQ4QzMyMC4xNDQsMjQyLjUxMywzNDQuMTI4LDIzMC44NzMsMzkwLjg1NiwyMzAuODczeg0KCSBNMzkwLjg1Niw0NTQuODczYy00Ni44LDAtNzAuNzkyLTExLjY4LTcyLTE2di0xMi41NzZjMTcuMDI0LDguNTc2LDQ1LjE0NCwxMi41NzYsNzIsMTIuNTc2czU0Ljk4NC00LjA0LDcyLTEyLjU4NHYxMi40NjQNCglDNDYxLjY0OCw0NDMuMTkzLDQzNy42NTYsNDU0Ljg3MywzOTAuODU2LDQ1NC44NzN6Ii8+DQo8cGF0aCBkPSJNNzcuMzc2LDIwNS43MjloNTcuNDhjMy43ODYsMCw2Ljg1Ni0zLjA3LDYuODU2LTYuODU2cy0zLjA3LTYuODU2LTYuODU2LTYuODU2SDc0LjU5MmMtMS43OTItMC4wMDQtMy41MTUsMC42OTQtNC44LDEuOTQ0DQoJbC0zNS43MzYsMzQuODU2Yy0xLjMzNSwxLjU2LTIuMDY3LDMuNTQ3LTIuMDY0LDUuNnY1Ni44OTZjMCwxLjcxMSwwLjYzOSwzLjM2LDEuNzkyLDQuNjI0bDMyLjUwNCwzNS41NTINCgljMS4yOTksMS40MjIsMy4xMzcsMi4yMzMsNS4wNjQsMi4yMzJoNjMuNTA0YzMuNzg2LDAsNi44NTYtMy4wNyw2Ljg1Ni02Ljg1NmMwLTMuNzg2LTMuMDctNi44NTYtNi44NTYtNi44NTZINzQuMzg0bC0yOC42NzItMzEuMzYNCgl2LTUyTDc3LjM3NiwyMDUuNzI5eiIvPg0KPHBhdGggZD0iTTIwMi44NTYsMjc0Ljg3M2gtMjBjLTQuNDE4LDAtOCwzLjU4Mi04LDhzMy41ODIsOCw4LDhoOGMwLDQuNDE4LDMuNTgyLDgsOCw4czgtMy41ODIsOC04di0wLjM2DQoJYzguODczLTEuMjUzLDE1LjU5NS04LjY0OCwxNi0xNy42Yy0wLjU3My0xMC40ODktOS41MDctMTguNTQ4LTIwLTE4LjA0aC04Yy0yLjQ4OCwwLTQtMS4zOTItNC0yczEuNTEyLTIsNC0yaDIwDQoJYzQuNDE4LDAsOC0zLjU4Miw4LThzLTMuNTgyLTgtOC04aC04YzAtNC40MTgtMy41ODItOC04LThzLTgsMy41ODItOCw4djAuMzZjLTguODczLDEuMjUzLTE1LjU5NSw4LjY0OC0xNiwxNy42DQoJYzAuNTczLDEwLjQ4OSw5LjUwNywxOC41NDgsMjAsMTguMDRoOGMyLjQ4OCwwLDQsMS4zOTIsNCwyUzIwNS4zNDQsMjc0Ljg3MywyMDIuODU2LDI3NC44NzN6Ii8+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="
+                                    height="100%" width="100%" style="border: 1px solid #d7d7d7;">
+                            </div>
+                            <div class="float-right pr-1 pb-1" style="width: 50%;height: 80px;">
+                                <img onclick="PayPal()" class="payment_PayPal" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDY5LjM1MSA0NjkuMzUxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NjkuMzUxIDQ2OS4zNTE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiMwM0E5RjQ7IiBkPSJNMzU2LjYyNiw4NS4wODZjLTEwLjMzMi05LjgzNy0yNS4zMTQtMTMuMDM2LTM4Ljc2My04LjI3N2MtMy44MDMsMS4yNzEtNi41NzMsNC41NjgtNy4xNjgsOC41MzMNCglsLTIuOTg3LDIwLjUyM2MtNC41MjksMzAuOTk4LTMxLjA1Miw1NC4wMTktNjIuMzc5LDU0LjE0NGgtNDIuNjY3Yy00Ljg5NiwwLjAwMS05LjE2MiwzLjMzNS0xMC4zNDcsOC4wODVsLTMyLDEyOA0KCWMtMS40MjYsNS43MTYsMi4wNTIsMTEuNTA1LDcuNzY4LDEyLjkzMWMwLjg0MywwLjIxLDEuNzA5LDAuMzE3LDIuNTc4LDAuMzE3aDUzLjMzM2M0Ljg5Ni0wLjAwMSw5LjE2Mi0zLjMzNSwxMC4zNDctOC4wODUNCglsMTkuMzA3LTc3LjI0OGg0MS42YzMxLjkzNCwwLjEwNiw1OS43OTItMjEuNjYsNjcuNDEzLTUyLjY3Mmw3Ljg3Mi0zMS41NTJDMzc2LjA3NSwxMjAuMzc3LDM3MC43NjMsOTkuNDksMzU2LjYyNiw4NS4wODZ6Ii8+DQo8Zz4NCgk8cGF0aCBzdHlsZT0iZmlsbDojMjgzNTkzOyIgZD0iTTEwLjY2NCw0MzcuMzQyQzQuNzczLDQzNy4zNDEtMC4wMDIsNDMyLjU2NCwwLDQyNi42NzNjMC0wLjg2OSwwLjEwNy0xLjczNSwwLjMxNy0yLjU3OA0KCQlsMTAuNjY3LTQyLjQ1M3YtMC40NDhsMTAuNjY3LTQyLjQzMmMxLjE4NS00Ljc1LDUuNDUxLTguMDg0LDEwLjM0Ny04LjA4NWgyNy4xMzZjMTQuNzI4LTAuMDAzLDI2LjY2OSwxMS45MzMsMjYuNjczLDI2LjY2MQ0KCQljMCwyLjE4MS0wLjI2Nyw0LjM1NC0wLjc5NSw2LjQ3bC0yLjY2NywxMC42NjdjLTIuOTY3LDExLjg3NS0xMy42MzcsMjAuMjA1LTI1Ljg3NywyMC4yMDNIMjkuNjcybC04LjY0LDM0LjU4MQ0KCQlDMTkuODQ1LDQzNC4wMTUsMTUuNTY3LDQzNy4zNTEsMTAuNjY0LDQzNy4zNDJ6IE0zNS4wMDUsMzczLjM0MmgyMS40NjFjMi40NDctMC4wMDcsNC41NzUtMS42NzgsNS4xNjMtNC4wNTNsMi42NjctMTAuNjY3DQoJCWMwLjczMS0yLjg0MS0wLjk4MS01LjczNy0zLjgyMi02LjQ2N2MtMC40MzgtMC4xMTMtMC44ODgtMC4xNjktMS4zNDEtMC4xNjdINDAuMzM4TDM1LjAwNSwzNzMuMzQyeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMyODM1OTM7IiBkPSJNMTI0LjczMyw0MzcuMzQyaC0xNS4xODljLTE2LjMzLDAuMDA0LTI5LjU3MS0xMy4yMzEtMjkuNTc1LTI5LjU2MQ0KCQljLTAuMDAxLTIuNDE5LDAuMjk2LTQuODI5LDAuODgyLTcuMTc1bDAsMGwxLjQwOC01LjY3NWMzLjE1Ny0xMi43MzYsMTQuNjEyLTIxLjY2MiwyNy43MzMtMjEuNjExaDE1LjE4OQ0KCQljMTYuMzMsMC4wMjgsMjkuNTQ1LDEzLjI4OSwyOS41MTcsMjkuNjE5Yy0wLjAwNCwyLjQwNy0wLjMwMiw0LjgwNC0wLjg4Nyw3LjEzOGwtMS40MDgsNS42NzUNCgkJQzE0OS4yNDMsNDI4LjQ1NywxMzcuODI0LDQzNy4zNjYsMTI0LjczMyw0MzcuMzQyeiBNMTAxLjU2NSw0MDUuNzljLTEuMDk2LDQuNDE0LDEuNTk0LDguODgsNi4wMDgsOS45NzYNCgkJYzAuNjQ1LDAuMTYsMS4zMDYsMC4yNDEsMS45NzEsMC4yNDNoMTUuMTg5YzMuMjg5LDAuMDA5LDYuMTU5LTIuMjI3LDYuOTU1LTUuNDE5bDEuNDA4LTUuNjc1YzEuMDk2LTQuNDE0LTEuNTk0LTguODgtNi4wMDgtOS45NzYNCgkJYy0wLjY0NS0wLjE2LTEuMzA2LTAuMjQxLTEuOTcxLTAuMjQzaC0xNS4xODljLTMuMjg5LTAuMDA5LTYuMTU5LDIuMjI3LTYuOTU1LDUuNDE5TDEwMS41NjUsNDA1Ljc5eiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMyODM1OTM7IiBkPSJNMTM4LjY2NCw0MzcuMzQyYy01Ljg5MS0wLjAwMi0xMC42NjUtNC43NzktMTAuNjY0LTEwLjY3YzAtMC44NjksMC4xMDctMS43MzUsMC4zMTctMi41NzgNCgkJbDEwLjY2Ny00Mi42NjdjMS40MjYtNS43Miw3LjIxOC05LjIwMiwxMi45MzktNy43NzZjNS43MiwxLjQyNiw5LjIwMiw3LjIxOCw3Ljc3NiwxMi45MzlsLTEwLjY2Nyw0Mi42NjcNCgkJQzE0Ny44NDUsNDM0LjAxNSwxNDMuNTY3LDQzNy4zNTEsMTM4LjY2NCw0MzcuMzQyeiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAzQTlGNDsiIGQ9Ik0yNjYuNjY0LDQzNy4zNDJjLTUuODkxLTAuMDAyLTEwLjY2NS00Ljc3OS0xMC42NjQtMTAuNjdjMC0wLjg2OSwwLjEwNy0xLjczNSwwLjMxNy0yLjU3OA0KCQlsMTAuNjY3LTQyLjQ1M3YtMC40NDhsMTAuNjY3LTQyLjQzMmMxLjE4NS00Ljc1LDUuNDUxLTguMDg0LDEwLjM0Ny04LjA4NWgyNy4xMzZjMTQuNzI4LTAuMDAzLDI2LjY2OSwxMS45MzMsMjYuNjczLDI2LjY2MQ0KCQljMCwyLjE4MS0wLjI2Nyw0LjM1NC0wLjc5NSw2LjQ3bC0yLjY2NywxMC42NjdjLTIuOTY3LDExLjg3NS0xMy42MzcsMjAuMjA1LTI1Ljg3NywyMC4yMDNoLTI2Ljc5NWwtOC42NCwzNC41ODENCgkJQzI3NS44NDUsNDM0LjAxNSwyNzEuNTY3LDQzNy4zNTEsMjY2LjY2NCw0MzcuMzQyeiBNMjkxLjAwNSwzNzMuMzQyaDIxLjQ4M2MyLjQ0Ny0wLjAwNyw0LjU3NS0xLjY3OCw1LjE2My00LjA1M2wyLjY2Ny0xMC42NjcNCgkJYzAuNzMtMi44NDEtMC45ODEtNS43MzctMy44MjItNi40NjdjLTAuNDM4LTAuMTEzLTAuODg5LTAuMTY5LTEuMzQxLTAuMTY3aC0xOC44MTZMMjkxLjAwNSwzNzMuMzQyeiIvPg0KCTxwYXRoIHN0eWxlPSJmaWxsOiMwM0E5RjQ7IiBkPSJNMzgwLjczMyw0MzcuMzQyaC0xNS4xODljLTE2LjMzLDAuMDA0LTI5LjU3MS0xMy4yMzEtMjkuNTc1LTI5LjU2MQ0KCQljLTAuMDAxLTIuNDE5LDAuMjk2LTQuODI5LDAuODgyLTcuMTc1bDAsMGwxLjQwOC01LjY3NWMzLjE1Ny0xMi43MzYsMTQuNjEyLTIxLjY2MiwyNy43MzMtMjEuNjExaDE1LjE4OQ0KCQljMTYuMzMtMC4wMDQsMjkuNTcxLDEzLjIzMSwyOS41NzUsMjkuNTYxYzAuMDAxLDIuNDE5LTAuMjk2LDQuODI5LTAuODgyLDcuMTc1bC0xLjQwOCw1LjY3NQ0KCQlDNDA1LjMwOSw0MjguNDY3LDM5My44NTQsNDM3LjM5MywzODAuNzMzLDQzNy4zNDJ6IE0zNTcuNTY1LDQwNS43OWMtMS4wOTYsNC40MTQsMS41OTQsOC44OCw2LjAwOCw5Ljk3Ng0KCQljMC42NDUsMC4xNiwxLjMwNiwwLjI0MSwxLjk3MSwwLjI0M2gxNS4xODljMy4yODksMC4wMDksNi4xNTktMi4yMjcsNi45NTUtNS40MTlsMS40MDgtNS42NzVjMS4wOTYtNC40MTQtMS41OTQtOC44OC02LjAwOC05Ljk3Ng0KCQljLTAuNjQ1LTAuMTYtMS4zMDYtMC4yNDEtMS45NzEtMC4yNDNoLTE1LjE4OWMtMy4yODktMC4wMDktNi4xNTksMi4yMjctNi45NTUsNS40MTlMMzU3LjU2NSw0MDUuNzl6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzAzQTlGNDsiIGQ9Ik0zOTQuNjY0LDQzNy4zNDJjLTUuODkxLTAuMDAyLTEwLjY2NS00Ljc3OS0xMC42NjQtMTAuNjdjMC0wLjg2OSwwLjEwNy0xLjczNSwwLjMxNy0yLjU3OA0KCQlsMTAuNjY3LTQyLjY2N2MxLjQyNi01LjcyLDcuMjE4LTkuMjAyLDEyLjkzOS03Ljc3NmM1LjcyLDEuNDI2LDkuMjAyLDcuMjE4LDcuNzc2LDEyLjkzOWwwLDBsLTEwLjY2Nyw0Mi42NjcNCgkJQzQwMy44NDUsNDM0LjAxNSwzOTkuNTY3LDQzNy4zNTEsMzk0LjY2NCw0MzcuMzQyeiIvPg0KPC9nPg0KPGc+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzI4MzU5MzsiIGQ9Ik0yMDIuNjY0LDQyNi42NzZjLTMuNTY4LTAuMDAyLTYuODk4LTEuNzg3LTguODc1LTQuNzU3bC0yMS4zMzMtMzINCgkJYy0zLjI3LTQuOTAxLTEuOTQ3LTExLjUyNSwyLjk1NS0xNC43OTVzMTEuNTI1LTEuOTQ3LDE0Ljc5NSwyLjk1NWwyMS4zMzMsMzJjMy4yNzUsNC44OTcsMS45NjEsMTEuNTIxLTIuOTM1LDE0Ljc5Nw0KCQlDMjA2Ljg0Niw0MjYuMDUxLDIwNC43NzgsNDI2LjY3NywyMDIuNjY0LDQyNi42NzZ6Ii8+DQoJPHBhdGggc3R5bGU9ImZpbGw6IzI4MzU5MzsiIGQ9Ik0xODEuMzMsNDU4LjY3NmMtNS44OTEtMC4wMDItMTAuNjY1LTQuNzgtMTAuNjYzLTEwLjY3MWMwLjAwMS0yLjQ5MywwLjg3NS00LjkwNywyLjQ3MS02LjgyMw0KCQlsNTMuMzMzLTY0YzMuNzc2LTQuNTI0LDEwLjUwNS01LjEzMSwxNS4wMjktMS4zNTVjNC41MjQsMy43NzYsNS4xMzEsMTAuNTA1LDEuMzU1LDE1LjAyOWwwLDBsLTUzLjMzMyw2NA0KCQlDMTg3LjQ5Myw0NTcuMjgxLDE4NC40OTIsNDU4LjY4LDE4MS4zMyw0NTguNjc2eiIvPg0KPC9nPg0KPHBhdGggc3R5bGU9ImZpbGw6IzAzQTlGNDsiIGQ9Ik00MzcuMzMsNDM3LjM0MmMtNS44OTEtMC4wMDItMTAuNjY1LTQuNzc5LTEwLjY2NC0xMC42N2MwLTAuODY5LDAuMTA3LTEuNzM1LDAuMzE3LTIuNTc4DQoJbDIxLjMzMy04NS4zMzNjMS40MjYtNS43Miw3LjIxOC05LjIwMiwxMi45MzktNy43NzZjNS43MiwxLjQyNiw5LjIwMiw3LjIxOCw3Ljc3NiwxMi45MzlsMCwwbC0yMS4zMzMsODUuMzMzDQoJQzQ0Ni41MTIsNDM0LjAxNSw0NDIuMjM0LDQzNy4zNTEsNDM3LjMzLDQzNy4zNDJ6Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojMjgzNTkzOyIgZD0iTTMyMS40MDUsMjkuMTI5Yy0xMC4yNDktMTEuNzM5LTI1LjA3Ny0xOC40NjgtNDAuNjYxLTE4LjQ1M0gxNTkuOTk3DQoJYy01LjE1OSwwLTkuNTc4LDMuNjkyLTEwLjQ5Niw4Ljc2OEwxMDYuODM0LDI1NC4xMWMtMS4wNDksNS43OTcsMi44MDEsMTEuMzQ2LDguNTk4LDEyLjM5NWMwLjYyNiwwLjExMywxLjI2MiwwLjE3LDEuODk4LDAuMTdoNjQNCgljNC44OTYtMC4wMDEsOS4xNjItMy4zMzUsMTAuMzQ3LTguMDg1bDE5LjMyOC03Ny4yNDhoMzQuMzI1YzQxLjk1OC0wLjE2NSw3Ny40NzgtMzEuMDEyLDgzLjUyLTcyLjUzM2w1LjMzMy0zNi40NTlsMCwwDQoJQzMzNi4zODIsNTYuNzczLDMzMS43MjEsNDEuMDA3LDMyMS40MDUsMjkuMTI5eiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo="
+                                    height="100%" width="100%" style="border: 1px solid #d7d7d7;">
+                            </div>
+                            <div class="float-left pr-1 pb-1" style="width: 50%;height: 80px;">
+                                <img onclick="GooglePay()" class="payment_GooglePay" src="https://cdn.worldvectorlogo.com/logos/google-pay-primary-logo.svg" height="100%" width="100%" style="border: 1px solid #d7d7d7;">
+                            </div>
+                            <div class="float-right pr-1 pb-1" style="width: 50%;height: 80px;">
+                                <img onclick="CreditCard()" class="payment_CreditCard pl-3 pr-3" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyLjAwMSA1MTIuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA1MTIuMDAxIDUxMi4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIHN0eWxlPSJmaWxsOiMxNDZBQTg7IiBkPSJNNDgxLjUzLDM0Ny4wMzNsMzAuMDE1LTE5MS42NDljMy4xMjEtMTkuNDQ4LTEwLjExMi0zNy43NDctMjkuNTYxLTQwLjg3N2wwLDBMNzYuOTczLDQ5LjUwMQ0KCUM1Ny41MjUsNDYuMzgsMzkuMjI3LDU5LjYxMywzNi4xMDYsNzkuMDYxbC0xNC4zOTIsODkuNjI3djE3Ny4yM0w0ODEuNTMsMzQ3LjAzM3oiLz4NCjxwYXRoIHN0eWxlPSJmaWxsOiMxMjYwOTk7IiBkPSJNNDgxLjk4NSwxMTQuNTA3TDM2Ni45NTMsOTYuMDQ5QzI4OS42OTQsMjE0LjI2NCwxNjQuNzk5LDI5Ni4xNDIsNjkuMDE5LDM0Ni4wMzRsNDEyLjUxMSwwLjk5OQ0KCWwzMC4wMTUtMTkxLjY0OUM1MTQuNjY2LDEzNS45MzUsNTAxLjQzMywxMTcuNjM3LDQ4MS45ODUsMTE0LjUwN0w0ODEuOTg1LDExNC41MDd6Ii8+DQo8cGF0aCBzdHlsZT0iZmlsbDojNDM5OEQxOyIgZD0iTTM1LjY2OSwxNTkuNzcxaDQxMC4xOTJjMTkuNjk4LDAsMzUuNjY5LDE1Ljk3MSwzNS42NjksMzUuNjY5djIzMS44NDgNCgljMCwxOS42OTgtMTUuOTcxLDM1LjY2OS0zNS42NjksMzUuNjY5SDM1LjY2OUMxNS45NzEsNDYyLjk1NiwwLDQ0Ni45ODYsMCw0MjcuMjg4VjE5NS40NEMwLDE3NS43NDIsMTUuOTcxLDE1OS43NzEsMzUuNjY5LDE1OS43NzF6DQoJIi8+DQo8cGF0aCBzdHlsZT0iZmlsbDojM0U4Q0M3OyIgZD0iTTQ0NS44NjEsMTU5Ljc3MWgtNy4xMzRjLTg0LjE3OSwxNDkuNDQ0LTI0MS40NjksMjUxLjk1Ni0zMzcuNDksMzAzLjE4NWgzNDQuNjI0DQoJYzE5LjY5OCwwLDM1LjY2OS0xNS45NzEsMzUuNjY5LTM1LjY2OVYxOTUuNDRDNDgxLjUzLDE3NS43NDIsNDY1LjU1OSwxNTkuNzcxLDQ0NS44NjEsMTU5Ljc3MXoiLz4NCjxyZWN0IHg9IjQ0LjU4NiIgeT0iMjA0LjM1NyIgc3R5bGU9ImZpbGw6I0ZEQjYyRjsiIHdpZHRoPSI4OS4xNzIiIGhlaWdodD0iNzEuMzM4Ii8+DQo8Zz4NCgk8cmVjdCB4PSI0NC41ODYiIHk9IjIzMS4xMDkiIHN0eWxlPSJmaWxsOiNGRDdCMkY7IiB3aWR0aD0iMjYuNzUyIiBoZWlnaHQ9IjE3LjgzNCIvPg0KCTxyZWN0IHg9IjEwNy4wMDciIHk9IjIzMS4xMDkiIHN0eWxlPSJmaWxsOiNGRDdCMkY7IiB3aWR0aD0iMjYuNzUyIiBoZWlnaHQ9IjE3LjgzNCIvPg0KPC9nPg0KPGNpcmNsZSBzdHlsZT0iZmlsbDojRkRCNjJGOyIgY3g9IjM5Mi4zNTgiIGN5PSIzNzMuNzg0IiByPSI0NC41ODYiLz4NCjxjaXJjbGUgc3R5bGU9ImZpbGw6I0RFNEMzQzsiIGN4PSIzMzguODU0IiBjeT0iMzczLjc4NCIgcj0iNDQuNTg2Ii8+DQo8Zz4NCgk8cmVjdCB4PSIzNS42NjkiIHk9IjMzOC4xMTUiIHN0eWxlPSJmaWxsOiM4N0NFRDk7IiB3aWR0aD0iNTMuNTAzIiBoZWlnaHQ9IjE3LjgzNCIvPg0KCTxyZWN0IHg9IjEyNC44NDEiIHk9IjMzOC4xMTUiIHN0eWxlPSJmaWxsOiM4N0NFRDk7IiB3aWR0aD0iNTMuNTAzIiBoZWlnaHQ9IjE3LjgzNCIvPg0KCTxyZWN0IHg9IjIxNC4wMTMiIHk9IjMzOC4xMTUiIHN0eWxlPSJmaWxsOiM4N0NFRDk7IiB3aWR0aD0iNTMuNTAzIiBoZWlnaHQ9IjE3LjgzNCIvPg0KCTxyZWN0IHg9IjM1LjY2OSIgeT0iMzkxLjYxOSIgc3R5bGU9ImZpbGw6Izg3Q0VEOTsiIHdpZHRoPSIyMzEuODQ4IiBoZWlnaHQ9IjE3LjgzNCIvPg0KCTxyZWN0IHg9IjMxMi4xMDMiIHk9IjIwNC4zNTciIHN0eWxlPSJmaWxsOiM4N0NFRDk7IiB3aWR0aD0iMTcuODM0IiBoZWlnaHQ9IjM1LjY2OSIvPg0KCTxyZWN0IHg9IjM0Ny43NzIiIHk9IjIwNC4zNTciIHN0eWxlPSJmaWxsOiM4N0NFRDk7IiB3aWR0aD0iMTcuODM0IiBoZWlnaHQ9IjM1LjY2OSIvPg0KCTxyZWN0IHg9IjM4My40NCIgeT0iMjA0LjM1NyIgc3R5bGU9ImZpbGw6Izg3Q0VEOTsiIHdpZHRoPSIxNy44MzQiIGhlaWdodD0iMzUuNjY5Ii8+DQoJPHJlY3QgeD0iNDE5LjEwOSIgeT0iMjA0LjM1NyIgc3R5bGU9ImZpbGw6Izg3Q0VEOTsiIHdpZHRoPSIxNy44MzQiIGhlaWdodD0iMzUuNjY5Ii8+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=="
+                                    height="100%" width="100%" style="border: 1px solid #d7d7d7;">
+                            </div>
+                            <div style="clear: both;"></div>
+                        </div>
+                    </div>
+                    <div class="choose_box p-3 float-right" style="width: 40%;height: 100px;">
+                        <label for="exampleInputEmail1">Nombre</label>
+                        <input id="customerName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="exampleInputEmail1" class="mt-3">Número telefónico</label>
+                        <input id="customerPhoneNumber" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su número telefónico">
+                        <label for="exampleInputEmail1" class="mt-3">Dirección</label>
+                        <input id="customerAddress" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingrese su dirección">
+                        <button onclick="MakePayment()" class="btn btn-primary float-right mt-3">Confirmar orden</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var scrollToMenuBtn = document.getElementById("scrollToMenuBtn");
+        var rootElement = document.documentElement;
+
+        function scrollToMenu() {
+            rootElement.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        }
+
+        scrollToMenuBtn.addEventListener("click", scrollToMenu);
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.payment_Cash').click(function() {
+                $('.payment_Cash').css('border', '2px solid #2195f3');
+                $('.payment_PayPal').css('border', '1px solid #d7d7d7');
+                $('.payment_GooglePay').css('border', '1px solid #d7d7d7');
+                $('.payment_CreditCard').css('border', '1px solid #d7d7d7');
+            });
+        });
+        $(document).ready(function() {
+            $('.payment_PayPal').click(function() {
+                $('.payment_PayPal').css('border', '2px solid #2195f3');
+                $('.payment_Cash').css('border', '1px solid #d7d7d7');
+                $('.payment_GooglePay').css('border', '1px solid #d7d7d7');
+                $('.payment_CreditCard').css('border', '1px solid #d7d7d7');
+            });
+        });
+        $(document).ready(function() {
+            $('.payment_GooglePay').click(function() {
+                $('.payment_GooglePay').css('border', '2px solid #2195f3');
+                $('.payment_Cash').css('border', '1px solid #d7d7d7');
+                $('.payment_PayPal').css('border', '1px solid #d7d7d7');
+                $('.payment_CreditCard').css('border', '1px solid #d7d7d7');
+            });
+        });
+        $(document).ready(function() {
+            $('.payment_CreditCard').click(function() {
+                $('.payment_CreditCard').css('border', '2px solid #2195f3');
+                $('.payment_Cash').css('border', '1px solid #d7d7d7');
+                $('.payment_PayPal').css('border', '1px solid #d7d7d7');
+                $('.payment_GooglePay').css('border', '1px solid #d7d7d7');
+            });
+        });
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        function myFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 120) {
+                document.getElementById("menu").className = "scroll_event_Add_class";
+            } else {
+                document.getElementById("menu").className = "";
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        .menu_account_show {
+            display: block !important;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function() {
+            $('.dot1').click(function() {
+                $('.video').css('display', 'block');
+                $('.video2').css('display', 'none');
+                $('.video3').css('display', 'none');
+            });
+
+            $('.dot2').click(function() {
+                $('.video2').css('display', 'block');
+                $('.video').css('display', 'none');
+                $('.video3').css('display', 'none');
+            });
+
+            $('.dot3').click(function() {
+                $('.video3').css('display', 'block');
+                $('.video').css('display', 'none');
+                $('.video2').css('display', 'none');
+            });
+
+            $(window).on('scroll load', function() {
+                if ($(window).scrollTop() > 10) {
+                    $('#header').addClass('header-active');
+                } else {
+                    $('#header').removeClass('header-active');
+                }
+            });
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        function ShowLoginModal() {
+            document.getElementById("loginBox").style.display = 'block';
+            document.getElementById("signUpBox").style.display = 'none';
+        }
+
+        function ShowSignUpModal() {
+            document.getElementById("loginBox").style.display = 'none';
+            document.getElementById("signUpBox").style.display = 'block';
+        }
+
+        $(document).ready(function() {
+
+            $('#menu_account_login').on('click', function() {
+                $('.khung').toggleClass('menu_account_show');
+            });
+
+
+        });
+
+        function CheckOut() {
+            document.getElementById("payment_form").style.display = 'block';
+            document.getElementById("checkout_form").style.display = 'none';
+        }
+        var paymentMethod;
+
+        function CashPayment() {
+            paymentMethod = "Cash";
+        }
+
+        function PayPal() {
+            paymentMethod = "PayPal";
+        }
+
+        function GooglePay() {
+            paymentMethod = "Google Pay";
+        }
+
+        function CreditCard() {
+            paymentMethod = "Credit card";
+        }
+
+
+        function management_web() {
+            document.getElementById("list_food_home").style.display = 'none';
+            document.getElementById("management_food").style.display = 'block';
+
+        }
+
+        function home_page() {
+            document.getElementById("list_food_home").style.display = 'block';
+            document.getElementById("management_food").style.display = 'none';
+            listFood();
+        }
+    </script>
+
+    <script type="text/javascript">
+        var id_order_food = JSON.parse(localStorage.getItem('id_order_food'));
+        if (id_order_food === null) {
+            id_order_food = [];
+            var id_order_food = 0;
+            localStorage.setItem("id_order_food", JSON.stringify(id_order_food));
+        }
+
+
+        var customerComment = JSON.parse(localStorage.getItem('customerComment'));
+        if (customerComment === null) {
+            customerComment = [];
+            var customerComment = [{}];
+            localStorage.setItem("customerComment", JSON.stringify(customerComment));
+        }
+
+
+
+        var paymentId = JSON.parse(localStorage.getItem('paymentId'));
+        if (paymentId === null) {
+            paymentId = [];
+            var paymentId = 0;
+            localStorage.setItem("paymentId", JSON.stringify(paymentId));
+        }
+
+        var idIncrement = JSON.parse(localStorage.getItem('idIncrement'));
+        if (idIncrement === null) {
+            idIncrement = [];
+            var idIncrement = 3;
+            localStorage.setItem("idIncrement", JSON.stringify(idIncrement));
+        }
+
+        var checkInfo = JSON.parse(localStorage.getItem('checkInfo'));
+        if (checkInfo === null) {
+            checkInfo = [];
+            var checkInfo = 0;
+            localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
+        }
+
+        var food = JSON.parse(localStorage.getItem('food'));
+        if (food === null) {
+            food = [];
+        }
+
+        var account = JSON.parse(localStorage.getItem('account'));
+        if (account === null) {
+            account = [];
+            var account = [{
+                id: 0,
+                username: "admin",
+                password: "123456",
+                level: 1
+            }, {
+                id: 1,
+                username: "b",
+                password: "b",
+                level: 0
+            }, {
+                id: 2,
+                username: "a",
+                password: "a",
+                level: 0
+            }];
+            localStorage.setItem("account", JSON.stringify(account));
+        }
+        var food = JSON.parse(localStorage.getItem('food'));
+        if (food === null) {
+            food = [];
+            food = [{
+                id: 0,
+                name: "1/4 de libra",
+                price: "330",
+                note: "Carne de 1/4 de libra, queso, cebolla , lechuga, tomate y pepinillos.Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_24f0f054e16440ee8c77e4e295552b0e~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+
+            }, {
+                id: 1,
+                name: "1/2 de libra",
+                price: "420",
+                note: "Dos carnes de 1/4 de libra, queso, cebolla, lechuga, tomate y pepinillos. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_9035cd341d6a4f11991a05689701c834~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 2,
+                name: "3/4 de libra",
+                price: "510",
+                note: "Tres carnes de 1/4 de libra, queso, cebolla, lechuga, tomate y pepinillos. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_ad08271fb1df49bba6f6fcdc6a5d48a8~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 3,
+                name: "Bacon Deluxe",
+                price: "375",
+                note: "Carne de 1/4 de libra, queso, Tocineta ahumada Applewood, cebolla, lechuga, tomate y pepinillos. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_191e233abc884c23984182030fe91a72~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 4,
+                name: "Baconator",
+                price: "495",
+                note: "Dos carnes de 1/4 de libra, queso y tocineta ahumada Applewood. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_e85bf8d3a9694e03905cafe046abc667~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 5,
+                name: "Chicken sandwich",
+                price: "405",
+                note: "Pechuga de pollo a elección, lechuga y tomate. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_0d3a7875de6c4d139c59dffa62a584fb~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 6,
+                name: "Asiago Ranch",
+                price: "460",
+                note: "Pechuga de pollo a elección, tocineta ahumada Applewood, lechuga y tomate. Incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_0d3a7875de6c4d139c59dffa62a584fb~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 7,
+                name: "Nuggets de pollo 5 piezas",
+                price: "260",
+                note: "5 piezas de nuggets de pollo incluye papas fritas y bebida 20 oz.",
+                image: new URL("https://static.wixstatic.com/media/086742_00a59e363b184060aa5e3b1b98fc6d65~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 8,
+                name: "BBQ wrap",
+                price: "380",
+                note: "Coleslaw, pechuga de pollo y salsa BBQ.",
+                image: new URL("https://static.wixstatic.com/media/086742_5ae471b2b5f2463f97ea7d2057fe3b06~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 9,
+                name: "Bacon wrap",
+                price: "380",
+                note: "Lechuga, tomates, tocineta, pechuga de pollo y salsa honey mustard.",
+                image: new URL("https://static.wixstatic.com/media/086742_e904de3466d74e2599136f62a39762ff~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 10,
+                name: "Baja salad",
+                price: "385",
+                note: "Mezcla de lechuga, pico de gallo, guacamole, queso cheddar rallado, nachos y chili.",
+                image: new URL("https://static.wixstatic.com/media/086742_5fe9a4d2baa649079c87e34d27d7b257~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.jpg")
+            }, {
+                id: 11,
+                name: "Chicken Caesar salad",
+                price: "385",
+                note: "Mezcla de lechuga, pollo, queso asiago, tomates cherry y croutons.",
+                image: new URL("https://static.wixstatic.com/media/086742_906287fa708c4080ab55fdea1ddda952~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.jpg")
+            }, {
+                id: 12,
+                name: "BBQ Ranch salad",
+                price: "385",
+                note: "Mezcla de lechuga, pechuga de pollo, maíz, tomate, queso cheddar rallado y salsa BBQ.",
+                image: new URL("https://static.wixstatic.com/media/086742_1cf8dd4c9bed42b68e1ae4889e24d1d8~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.jpg")
+            }, {
+                id: 13,
+                name: "Papa al horno",
+                price: "195",
+                note: "Papa horneada con queso cheddar fundido. Disponibles con brócoli, tocineta o chili.",
+                image: new URL("https://static.wixstatic.com/media/48db21_6f0ad6ee16fe4fddb4d344a8e88a5f84~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 14,
+                name: "Papa con queso",
+                price: "165",
+                note: "Papa horneada con queso cheddar fundido.",
+                image: new URL("https://static.wixstatic.com/media/086742_8228c8ead51c49b9918262d36b652bcf~mv2.jpg/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.jpg")
+            }, {
+                id: 15,
+                name: "Bacon Cheese fries",
+                price: "155",
+                note: "Papas fritas con queso cheddar y bacon troceado.",
+                image: new URL("https://static.wixstatic.com/media/48db21_7192a124530b42c6b355b05c84e53188~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 16,
+                name: "Frosty peq",
+                price: "100",
+                note: "12 oz de Frosty de vainilla o chocolate.",
+                image: new URL("https://static.wixstatic.com/media/48db21_f851a3b06a8a4e6fa722b62e3f550a77~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 17,
+                name: "Frosty med ",
+                price: "110",
+                note: "16 oz de Frosty de vainilla o chocolate.",
+                image: new URL("https://static.wixstatic.com/media/48db21_f851a3b06a8a4e6fa722b62e3f550a77~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 18,
+                name: "Frosty gde",
+                price: "120",
+                note: "20 oz de Frosty de vainilla o chocolate.",
+                image: new URL("https://static.wixstatic.com/media/48db21_f851a3b06a8a4e6fa722b62e3f550a77~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 19,
+                name: "Parfait fresa y blueberry",
+                price: "170",
+                note: "12 oz de Frosty con syrup de berries con fresa y blueberry.",
+                image: new URL("https://static.wixstatic.com/media/48db21_85a8e049c0a34ef9815f8849e793a501~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 20,
+                name: "Frosty de Nutella",
+                price: "195",
+                note: "12 oz de Frosty con Nutella.",
+                image: new URL("https://static.wixstatic.com/media/908a1b_43ed209e2d5f4faca7962a46c8a41ec2~mv2_d_3696_5328_s_4_2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 21,
+                name: "Twisted M&M peq",
+                price: "120",
+                note: "10 oz de Frosty mezclado con M&M.",
+                image: new URL("https://static.wixstatic.com/media/48db21_e275195e272f4304aab19d5dbf35188e~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 22,
+                name: "Twisted M&M gde",
+                price: "170",
+                note: "12 oz de Frosty mezclado con M&M.",
+                image: new URL("https://static.wixstatic.com/media/48db21_e275195e272f4304aab19d5dbf35188e~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }, {
+                id: 23,
+                name: "Twisted Oreo gde",
+                price: "170",
+                note: "12 oz de Frosty mezclado con Oreo.",
+                image: new URL("https://static.wixstatic.com/media/48db21_90043a20b1fb4ed2ab9b79c7c27a2a01~mv2.png/v1/fill/w_232,h_232,usm_1.20_1.00_0.01/file.png")
+            }];
+            localStorage.setItem("food", JSON.stringify(food));
+        }
+
+        var orderFood = JSON.parse(localStorage.getItem('orderFood'));
+
+        if (orderFood === null) {
+            orderFood = [{}];
+            localStorage.setItem("orderFood", JSON.stringify(orderFood));
+        }
+
+        var accountInfo = JSON.parse(localStorage.getItem('accountInfo'));
+        if (accountInfo === null) {
+            accountInfo = [];
+            var accountInfo = [{}];
+            localStorage.setItem("accountInfo", JSON.stringify(accountInfo));
+        }
+
+        var checkLogin = JSON.parse(localStorage.getItem('checkLogin'));
+        if (checkLogin === null) {
+            checkLogin = [];
+            var checkLogin = -1;
+            localStorage.setItem("checkLogin", JSON.stringify(checkLogin));
+        }
+        if (checkLogin == -1) {
+
+        } else if (account[checkLogin].level == 0) {
+
+            document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
+            document.getElementById("menu_account_login").innerHTML = account[checkLogin].username;
+            document.getElementById("menu_account_login").style.display = 'block';
+            document.getElementById("menu_login_button").style.display = 'none';
+            document.getElementById("greetUser").innerHTML = "Bienvenido " + account[checkLogin].username + " !";
+            document.getElementById("menu_logout").style.display = 'block';
+            document.getElementById("modalMenu").style.display = 'none';
+            PrintOrder();
+            demOrder();
+        } else if (account[checkLogin].level == 1) {
+            document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
+            document.getElementById("menu_account_login").innerHTML = account[checkLogin].username;
+            document.getElementById("menu_account_login").style.display = 'block';
+            document.getElementById("menu_login_button").style.display = 'none';
+            document.getElementById("greetUser").innerHTML = "Bienvenido " + account[checkLogin].username + " !";
+            document.getElementById("menu_logout").style.display = 'block';
+            document.getElementById("modalMenu").style.display = 'block';
+            PrintOrder();
+            demOrder();
+
+        }
+
+        var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+        if (paymentFood === null) {
+            paymentFood = [];
+            var paymentFood = [{}];
+            localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+        }
+        console.log(account);
+
+        function SignUp() {
+            var checkUsername = 0;
+            var id = idIncrement;
+            var level = 0;
+            var username = document.getElementById('signUpUsername').value;
+            var password = document.getElementById('signUpPassword').value;
+            var passwordRepetition = document.getElementById('reSignUpPassword').value;
+            if (username != '' && password != '' && passwordRepetition != '' && password == passwordRepetition) {
+                for (let i = 0; i < account.length; i++) {
+                    if (account[i].username == username) {
+
+
+                        checkUsername = 1;
+                        break;
+                    }
+                }
+                if (checkUsername == 0) {
+                    accountSignup = {
+                        id,
+                        username,
+                        password,
+                        level
+                    };
+                    account.push(accountSignup);
+
+                    localStorage.setItem("account", JSON.stringify(account));
+
+                    checkLogin = id;
+                    localStorage.setItem("checkLogin", JSON.stringify(checkLogin));
+
+                    var id = idIncrement++;
+                    localStorage.setItem("idIncrement", JSON.stringify(idIncrement));
+                    console.log(account);
+                    document.getElementById("signUpStatus").innerHTML = "Registro completado exitosamente";
+                    document.getElementById("menu_account_login").innerHTML = username;
+                    document.getElementById("menu_account_login").style.display = 'block';
+                    document.getElementById("menu_login_button").style.display = 'none';
+                    document.getElementById("greetUser").innerHTML = "Bienvenido " + username + " !";
+                    document.getElementById("menu_logout").style.display = 'block';
+                    location.reload();
+                } else {
+                    document.getElementById("signUpStatus").innerHTML = "Error. Esta cuenta ya existe. Intente de nuevo.";
+                }
+            } else {
+                document.getElementById("signUpStatus").innerHTML = "Por favor complete todos los campos";
+            }
+        }
+
+        function Login() {
+            for (i = 0; i < account.length; i++) {
+                if ((document.getElementById("usernameLogin").value == account[i].username) && (document.getElementById("passwordLogin").value == account[i].password)) {
+                    checkLogin = account[i].id;
+                    localStorage.setItem("checkLogin", JSON.stringify(checkLogin));
+
+                    if (account[i].level == 0) {
+                        document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
+                        document.getElementById("menu_account_login").innerHTML = account[i].username;
+                        document.getElementById("menu_account_login").style.display = 'block';
+                        document.getElementById("menu_login_button").style.display = 'none';
+                        document.getElementById("greetUser").innerHTML = "Bienvenido " + account[i].username + " !";
+                        document.getElementById("menu_logout").style.display = 'block';
+                        document.getElementById("modalMenu").style.display = 'none';
+                        PrintOrder();
+                        demOrder();
+
+                        location.reload();
+
+                    } else if (account[i].level == 1) {
+                        document.getElementById("loginStatus").innerHTML = "Sesión cerrada exitosamente";
+                        document.getElementById("menu_account_login").innerHTML = account[i].username;
+                        document.getElementById("menu_account_login").style.display = 'block';
+                        document.getElementById("menu_login_button").style.display = 'none';
+                        document.getElementById("greetUser").innerHTML = "Bienvenido " + account[i].username + " !";
+                        document.getElementById("menu_logout").style.display = 'block';
+                        document.getElementById("modalMenu").style.display = 'block';
+                        PrintOrder();
+                        demOrder();
+                        location.reload();
+                    }
+                }
+            }
+            if (checkLogin == -1) {
+                document.getElementById("loginStatus").innerHTML = "Cuenta o contraseña incorrectos";
+
+            }
+        }
+
+        function DeleteOrder(id_order) {
+            for (var i = 0; i < orderFood.length; i++) {
+                if (id_order == orderFood[i].id_order && checkLogin == orderFood[i].user_id_order) {
+                    orderFood.splice(i, 1);
+                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                    PrintOrder();
+                    demOrder();
+                    break;
+                }
+            }
+        }
+
+        function totalMoney(checkLogin) {
+            var total_order = 0;
+            for (let i = 0; i < orderFood.length; i++) {
+                if (checkLogin == orderFood[i].user_id_order) {
+                    total_order += orderFood[i].price_order * orderFood[i].quanlity_order;
+
+                }
+
+            }
+            document.getElementById("total_money").innerHTML = "DOP" + total_order;
+
+        }
+
+        function upQuality(id_order) {
+            var ok = 0;
+            for (let i = 0; i < orderFood.length; i++) {
+                if (id_order == orderFood[i].id_order && checkLogin == orderFood[i].user_id_order) {
+                    var quality_input_change = document.getElementById('quality_input_change' + i).value;
+                    orderFood[i].quanlity_order = quality_input_change;
+                    ok += orderFood[i].price_order * orderFood[i].quanlity_order;
+                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                    PrintOrder();
+                }
+            }
+        }
+        document.getElementById("customerName").value = account[checkLogin].username;
+        document.getElementById("customerPhoneNumber").value = accountInfo[checkLogin].customerPhoneNumber;
+        document.getElementById("customerAddress").value = accountInfo[checkLogin].customerAddress;
+        for (let i = 0; i < orderFood.length; i++) {
+            if (accountInfo[i].accountPayment == account[checkLogin].id) {
+                checkInfo = 1;
+                localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
+            } else {
+                checkInfo = 0;
+                localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
+            }
+        }
+
+
+        function MakePayment() {
+            var paymentId = JSON.parse(localStorage.getItem('paymentId'));
+            var customerName = document.getElementById("customerName").value;
+            var customerPhoneNumber = document.getElementById("customerPhoneNumber").value;
+            var customerAddress = document.getElementById("customerAddress").value;
+            var status = "Esperando confirmación";
+            var priceTotal = 0;
+            PushPaymentArray();
+            for (let i = 0; i < orderFood.length; i++) {
+                if (orderFood[i].user_id_order == checkLogin) {
+                    priceTotal += orderFood[i].price_order * orderFood[i].quanlity_order;
+                    quanlityPayment = orderFood[i].quanlity_order;
+
+                }
+            }
+            accountPayment = account[checkLogin].id;
+            paymentArray = {
+                paymentId,
+                accountPayment,
+                showOrderDetail,
+                quanlityPayment,
+                priceTotal,
+                customerName,
+                customerPhoneNumber,
+                customerAddress,
+                paymentMethod,
+                status
+            };
+            paymentFood.push(paymentArray);
+            localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+            paymentId++;
+            localStorage.setItem("paymentId", JSON.stringify(paymentId));
+            var checkInfo = JSON.parse(localStorage.getItem('checkInfo'));
+            if (checkInfo == 0) {
+                account_info_arr = {
+                    accountPayment,
+                    customerName,
+                    customerPhoneNumber,
+                    customerAddress,
+                    paymentMethod
+                };
+                accountInfo.push(account_info_arr);
+                localStorage.setItem("accountInfo", JSON.stringify(accountInfo));
+                checkInfo = 1;
+                localStorage.setItem("checkInfo", JSON.stringify(checkInfo));
+                console.log(paymentFood);
+
+            }
+            for (let i = 0; i < orderFood.length; i++) {
+                if (checkLogin == orderFood[i].user_id_order) {
+                    orderFood.splice(i, 5);
+                    localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                    location.reload();
+                }
+            }
+
+        }
+
+        function PrintOrder() {
+            document.getElementById("prinf_order").innerHTML = '';
+            for (let i = 0; i < paymentFood.length; i++) {
+                if (paymentFood[i].accountPayment == checkLogin) {
+                    document.getElementById("prinf_order").innerHTML += paymentFood[i].showOrderDetail;
+
+
+                }
+            }
+        }
+
+        function checkorder(id) {
+            if (checkLogin == -1) {
+                alert("Inicie sesión antes de continuar");
+            } else {
+
+
+                for (let i = 0; i < orderFood.length; i++) {
+                    var checkordervalue = 0;
+
+                    if (id == orderFood[i].id_food && checkLogin == orderFood[i].user_id_order) {
+
+                        checkordervalue = 1;
+                        orderFood[i].quanlity_order++;
+
+                        orderFood[i].quanlity_order;
+                        localStorage.setItem("orderFood", JSON.stringify(orderFood));
+                        PrintOrder();
+
+                    }
+
+                }
+                if (checkordervalue == 0) {
+                    orderpush(id);
+                    PrintOrder();
+
+                }
+            }
+        }
+
+
+
+        function orderpush(id) {
+            var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+            id_order = id_order_food;
+            var name_order = food[id].name;
+            var price_order = food[id].price;
+            var image_order = food[id].image;
+            var note_order = food[id].note;
+            var quanlity_order = 1;
+            var user_id_order = checkLogin;
+            var id_food = id;
+            food_order = {
+                id_order,
+                name_order,
+                price_order,
+                image_order,
+                note_order,
+                quanlity_order,
+                user_id_order,
+                id_food
+            };
+            orderFood.push(food_order);
+
+            localStorage.setItem("orderFood", JSON.stringify(orderFood));
+
+            console.log(food_order);
+            id_order_food++;
+            localStorage.setItem("id_order_food", JSON.stringify(id_order_food));
+            demOrder();
+
+
+            PrintOrder();
+
+            console.log(orderFood);
+
+        }
+
+        function demOrder() {
+            var demOrder = 0;
+            for (let i = 0; i < orderFood.length; i++) {
+                if (checkLogin == orderFood[i].user_id_order)
+                    demOrder++;
+                document.getElementById("order_number").innerHTML = demOrder;
+
+            }
+        }
+
+        function PrintOrder() {
+            document.getElementById("printOrderCart").innerHTML = '';
+            var orderFood = JSON.parse(localStorage.getItem('orderFood'));
+            totalMoney(checkLogin);
+            for (let i = 0; i < orderFood.length; i++) {
+                if (checkLogin == orderFood[i].user_id_order) {
+                    var printOrderCart = `<tr>  
+                    <td><div>
+                        <div class="cart_img_box float-left">
+                            <img src="` + orderFood[i].image_order + `" width="100%" height="100%">
+                        </div>
+                        <div class="cart_info_box float-left pl-3">
+                            <p class="mb-1 font-weight-bold" style="font-size: 110%;">` + orderFood[i].name_order + `</p>
+                            <p style="font-size: 70%">` + orderFood[i].note_order + `</p>
+                        </div>
+                    </div> </td>
+                    <td class="text-center"><input id="quality_input_change` + i + `" onchange ="upQuality(` + orderFood[i].id_order + `)" class="cart_input_quanlity mt-2" type="number" value="` + orderFood[i].quanlity_order + `" name="" min="1" max="20
+                                " style=""> </td>
+                    <td class="text-center"><p class="mt-2" style="padding:5px;">DOP` + orderFood[i].price_order * orderFood[i].quanlity_order + `</p></td>
+                    <td class="text-center"><div onclick="DeleteOrder(` + orderFood[i].id_order + `)" class="cart_button_delete"><i class="fa fa-trash" aria-hidden="true" style="color: #000000;font-size: 180%"></i></div> </td>
+                    </tr>`
+                    document.getElementById("printOrderCart").innerHTML += printOrderCart;
+
+
+
+
+
+
+                }
+
+            }
+
+        }
+
+        var showOrderDetail;
+
+        function PushPaymentArray() {
+
+            showOrderDetail = '';
+            totalMoney(checkLogin);
+
+            for (let i = 0; i < orderFood.length; i++) {
+                if (checkLogin == orderFood[i].user_id_order) {
+
+                    var pushCart = `<div class="cart_img_box float-left mb-2" style="width: 80px;">
+                    <img src="` + orderFood[i].image_order + `" width="100%" height="100%">
+                    </div>
+                    <div class="cart_info_box float-left pl-3">
+                        <p class="mb-1 font-weight-bold" style="font-size: 115%;">` + orderFood[i].name_order + `</p>
+                        <p style="font-size: 85%">` + orderFood[i].note_order + `</p>
+                    </div>
+                    <div class="quanlity" style="float: right;width: 30px;height: 30px;">
+                    <p>` + orderFood[i].quanlity_order + `</p>
+                    </div><div style="clear:both;"></div>`
+                    showOrderDetail += pushCart;
+
+
+                }
+
+            }
+
+        }
+
+        function PrintUserPayment() {
+            document.getElementById("printUserPayment").innerHTML = '';
+            var paymentFood = JSON.parse(localStorage.getItem('paymentFood'));
+            for (let i = 0; i < paymentFood.length; i++) {
+                if (checkLogin == paymentFood[i].accountPayment) {
+                    var prinf_payment_cart_user = `<tr style="border-bottom:1px solid #ccc;">
+      <td>
+      <p>Nombre del destinatario: ` + paymentFood[i].customerName + `</p>
+      <p>Dirección: ` + paymentFood[i].customerAddress + `</p>
+      <p>Número telefónico: ` + paymentFood[i].customerPhoneNumber + `</p>
+       <p>Método de pago: ` + paymentFood[i].paymentMethod + `</p>
+       
+      </td>
+      
+      <td>` + paymentFood[i].showOrderDetail + `<div id="comment_box` + i + `"></div></td>
+      <td class="text-center">` + paymentFood[i].priceTotal + `</td>
+      <td class="text-center"><button id="printStatus` + paymentFood[i].paymentId + `" onclick="suscess_payment(` + paymentFood[i].paymentId + `)" class="btn btn-warning text-white">` + paymentFood[i].status + `</button></td>
+          </tr>
+    <tr style="width:100%"></tr>
+    `
+
+                    document.getElementById("printUserPayment").innerHTML += prinf_payment_cart_user;
+                }
+            }
+
+        }
+
+
+        function suscess_payment(id) {
+            for (let i = 0; i < paymentFood.length; i++) {
+                if (id == paymentFood[i].paymentId) {
+                    paymentFood[i].status = "Recibido";
+                    localStorage.setItem("paymentFood", JSON.stringify(paymentFood));
+                    document.getElementById("printStatus" + id).innerHTML = paymentFood[i].status;
+
+                    var comment_box = `<div class="p-3 pb-0" style="width: 100%;background: #ff6f47;">
+                    <div style="float: left;width: 50%">
+                    <label class=" text-white mb-3" style="width: 100%;">Escriba un comentario</label>
+                    <input id="comment_text` + id + `" type="passwork" class="form-control text-white" id="rePasswordAddInput"  style="width: 100%;background: #ff8f70;border: 0;outline: none;">
+                    </div>
+                    <div class="pt-3" style="float: right;width: 50%">
+                    <button onclick="sendToAdmin(` + id + `)" class="btn btn-warning float-right text-white" >Enviar</button>
+                    <p id="support_send" class="float-right mb-0 mt-3 text-white"></p>
+                        </div>
+                    
+                    <div style="clear: both;"></div>
+                    </div>`;
+
+                    document.getElementById("comment_box" + i).innerHTML += comment_box;
+                    document.getElementById("idcover" + i).value = id;
+
+
+                }
+            }
+        }
+
+        function sendToAdmin(id) {
+            var checkLogin = JSON.parse(localStorage.getItem('checkLogin'));
+            var content_comment = document.getElementById("comment_text" + id).value;
+            idPayment = id;
+            idUser = checkLogin;
+            customerCommentArr = {
+                idPayment,
+                idUser,
+                content_comment
+            };
+            customerComment.push(customerCommentArr);
+            localStorage.setItem("customerComment", JSON.stringify(customerComment));
+            document.getElementById("support_send").innerHTML = "Comentario enviado exitosamente";
+        }
+
+
+
+
+        function listFood() {
+            document.getElementById("prinf_food").innerHTML = '';
+            var food = JSON.parse(localStorage.getItem('food'));
+            for (let i = 0; i < food.length; i++) {
+                var prinf = `<div class="col-12 col-sm-6 col-md-4 col-lg-3 p-4">
+			<div class="produre_box bg-white shadow-sm">
+				<div class="image_box">
+					<img src="` + food[i].image + `" width="100%" height="115%" style="">
+				</div>
+				<div class="info_box p-3 bg-white">
+					<p class="float-left font-weight-bold mb-0" style="font-size: 115%">` + food[i].name + `</p><p class="float-right font-weight-bold mb-2" style="font-size: 115%">DOP` + food[i].price + `</p>
+					<div style="clear: both;"></div>
+					
+					<p align="center" style="font-size: 73%;height:65px;">` + food[i].note + `</p>
+					<div class="star_box float-left pt-2">
+						<img src="icon_star.svg" width="80%">
+					</div>
+					<div class="order_box float-right">
+						<div onclick="checkorder(` + food[i].id + `)" class="order_button float-right pt-2">
+							<i class="fa fa-plus" aria-hidden="true"></i>
+						</div>
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+		</div>`;
+                document.getElementById("prinf_food").innerHTML += prinf;
+            }
+        }
+
+        function ChangePassword() {
+            var account = JSON.parse(localStorage.getItem('account'));
+            if (document.getElementById("passcurrent").value == account[checkLogin].password && document.getElementById("passnew").value == document.getElementById("passnewrepeat").value) {
+                account[checkLogin].password = document.getElementById("passnew").value;
+                localStorage.setItem("account", JSON.stringify(account));
+                document.getElementById("notification_change_pass").innerHTML = "Contraseña cambiada exitosamente";
+
+                setTimeout(() => location.reload(), 1000);
+
+            } else {
+                document.getElementById("notification_change_pass").innerHTML = "La información proporcionada es incorrecta";
+            }
+        }
+
+        function LogOut() {
+            document.getElementById("menu_account_login").style.display = 'none';
+            document.getElementById("menu_login_button").style.display = 'block';
+            document.getElementById("menu_logout").style.display = 'none';
+            checkLogin = -1;
+            localStorage.setItem("checkLogin", JSON.stringify(checkLogin));
+            document.getElementById("order_number").innerHTML = '0';
+            document.getElementById("printOrderCart").innerHTML = '';
+            document.getElementById("payment_form").style.display = 'none';
+            document.getElementById("checkout_form").style.display = 'block';
+            document.getElementById("customerName").value = '';
+            document.getElementById("customerPhoneNumber").value = '';
+            document.getElementById("customerAddress").value = '';
+
+
+        }
+    </script>
+
+    <script type="text/javascript">
+        function LoadAll() {
+            PrintUserPayment();
+            listFood();
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
