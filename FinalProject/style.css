@@ -55,7 +55,7 @@ a.active {
     background: #0082e6;
 }
 
-a:hover {
+nav ul li a:hover {
     background: #fff;
     transition: .5s;
     color: #0082e6;
